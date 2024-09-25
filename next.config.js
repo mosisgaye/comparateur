@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = nextConfig;
+const nextConfig = {
+    images: {
+      domains: ['www.ariase.com'], // Ajoute le domaine de tes images
+    },
+  };
+  
+  module.exports = nextConfig;
+  

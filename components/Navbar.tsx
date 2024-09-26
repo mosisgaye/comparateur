@@ -1,94 +1,127 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ThemeSwitcher } from './theme-switcher';
-import Modal from '@/components/Modal'; // Assure-toi que le chemin est correct
 
-const Navbar = () => {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // État pour le modal
 
-  // Fonction pour ouvrir le modal
-  const openModal = () => setIsModalOpen(true);
-
-  // Fonction pour fermer le modal
-  const closeModal = () => setIsModalOpen(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className="w-full flex flex-col">
-      {/* Top Bar */}
-      <div className="w-full bg-[#f0f3ff] dark:bg-[#012737] flex justify-between items-center h-[35px] px-8 text-black dark:text-white">
-        La fibre à partir de 19,99€
-        <button
-          onClick={openModal} // Ouvre le modal
-          className="border border-[#2f55d4] text-[#2f55d4] dark:border-white dark:text-white px-3 py-1 rounded-full text-sm flex items-center hover:bg-[#2f55d4] hover:text-white dark:hover:bg-white dark:hover:text-[#012737] transition-colors"
-        >
-          <span className="mr-1">📞</span> Rappel gratuit
-        </button>
+    <header className="sticky top-0 z-50 bg-[#f0f3ff] dark:bg-[#012737] text-black dark:text-white px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
+      {/* Logo */}
+      <div className="flex items-center px-10">
+        <Link href="/">
+          <img className="w-[124px] h-[77px] md:w-[124px] md:h-[77px]" src="/images/compareprix.svg" alt="Logo" />
+        </Link>
       </div>
 
-      {/* Main Navbar */}
-      <div className="w-full h-[77px] flex items-center justify-between px-8 md:px-16 bg-white dark:bg-[#012737] shadow-md">
-        {/* Logo */}
-        <div className="flex items-center px-20">
-          <Link href="/" className="ml-4 text-pink-500 dark:text-white text-[18px] md:text-[20px] font-bold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-            <img className="w-[100px] h-[70px] md:w-[124px] md:h-[77px]" src="/images/Compareprix.svg" alt="Logo" />
-          </Link>
-        </div>
+      {/* Navigation Links for desktop */}
+      <nav className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
+        <a href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</a>
+        <a href="/telecom/" className="mx-2 text-lg font-semibold hover:text-gray-400">Télécom</a>
+        <a href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">Esim</a>
+        <a href="/blog/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</a>
+        <ThemeSwitcher />
+      </nav>
 
-     
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8 lg:space-x-12 items-center px-20">
-          <Link href="/energie" className="text-black dark:text-white text-[18px] md:text-[20px] font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-            Énergie
-          </Link>
-          <Link href="/telecom" className="text-black dark:text-white text-[18px] md:text-[20px] font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-            Télécom
-          </Link>
-          <Link href="/blog" className="text-black dark:text-white text-[18px] md:text-[20px] font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-            Blogue
-          </Link>
-          <Link href="/esim" className="text-black dark:text-white text-[18px] md:text-[20px] font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-            Esim
-          </Link>
-          <ThemeSwitcher />
-        </nav>
-
-        {/* Hamburger Menu for Mobile */}
-        <button
-          className={`block md:hidden z-50 ${isMenuOpen ? 'open' : ''}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+      {/* Action Buttons */}
+      <nav className="flex items-center">
+        <Link
+          href="https://souscription.ekwateur.fr/"
+          className="bg-[#79CE25] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
         >
-          <div className={`w-[30px] h-[3px] bg-black dark:bg-white mb-[6px] transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-x-[5px] translate-y-[5px]' : ''}`} />
-          <div className={`w-[30px] h-[3px] bg-black dark:bg-white mb-[6px] transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-          <div className={`w-[30px] h-[3px] bg-black dark:bg-white transition-transform duration-300 ${isMenuOpen ? 'rotate-[-45deg] translate-x-[5px] -translate-y-[5px]' : ''}`} />
+          Estimer mon prix
+        </Link>
+      
+
+        {/* Hamburger Menu for mobile */}
+        <button className="xl:hidden ml-2" onClick={toggleMenu}>
+          {!isMenuOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-8 h-8 text-black dark:text-white"
+            >
+              <path d="M5 17h14M5 12h14M5 7h14" />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-8 h-8 text-black"
+            >
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          )}
         </button>
+      </nav>
 
-        {/* Sidebar Menu */}
-        <div
-          className={`fixed top-0 right-0 w-[250px] h-full bg-white dark:bg-[#012737] shadow-lg z-50 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-        >
-          <nav className="flex flex-col items-start p-4 space-y-6 mt-[77px]">
-            <Link href="/energie" className="text-gray-800 dark:text-white text-[18px] font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Énergie
-            </Link>
-            <Link href="/telecom" className="text-gray-800 dark:text-white text-[18px] font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Télécom
-            </Link>
-            <Link href="/blog" className="text-gray-800 dark:text-white text-[18px] font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Blogue
-            </Link>
-            <Link href="/actualité" className="text-gray-800 dark:text-white text-[18px] font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Esim
-            </Link>
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-[#012737] text-white transform transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        } z-40`}
+      >
+        <div className="p-6">
+          <div className="flex justify-between items-center">
+            <a href="/" className="relative w-40" aria-label="compareprix logo">
+              <Image
+                alt="Logo ComparePrix"
+                src="/images/compareprix.svg"
+                layout="fill"
+                objectFit="contain"
+                priority
+              />
+            </a>
+            <button onClick={toggleMenu} className="text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <nav className="mt-10 space-y-4 text-center">
+            <a href="/energie/" className="block text-lg font-semibold">Énergie</a>
+            <a href="/telecom/" className="block text-lg font-semibold">Télécom</a>
+            <a href="/esim/" className="block text-lg font-semibold">Esim</a>
+            <a href="/blog/" className="block text-lg font-semibold">Blogue</a>
+            <ThemeSwitcher />
           </nav>
+
+          {/* Action Buttons */}
+          <div className="mt-8 space-y-4 text-center">
+            <a
+              href="https://mon-espace.ekwateur.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#79CE25] text-white rounded-full text-center py-3"
+            >
+              Connexion
+            </a>
+            <a
+              href="/contact"
+              className="block border-2 border-[#79CE25] rounded-full text-center py-3 text-[#79CE25]"
+            >
+              Contactez-nous
+            </a>
+          </div>
         </div>
       </div>
-
-      {/* Modal */}
-      <Modal isOpen={isModalOpen} closeModal={closeModal} />
     </header>
   );
-};
-
-export default Navbar;
+}

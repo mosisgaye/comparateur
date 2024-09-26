@@ -1,11 +1,16 @@
 'use client'
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ThemeSwitcher } from './theme-switcher';
+import Popup from '@/components/Popup';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  // Fonction pour ouvrir et fermer le popup
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,13 +36,13 @@ export default function Header() {
 
       {/* Action Buttons */}
       <nav className="flex items-center">
-        <Link
-          href="https://souscription.ekwateur.fr/"
+        {/* Button to open the popup */}
+        <button
+          onClick={openPopup}
           className="bg-[#79CE25] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
         >
-          Estimer mon prix
-        </Link>
-      
+          Parlez à un expert
+        </button>
 
         {/* Hamburger Menu for mobile */}
         <button className="xl:hidden ml-2" onClick={toggleMenu}>
@@ -65,6 +70,9 @@ export default function Header() {
         </button>
       </nav>
 
+      {/* Popup */}
+      <Popup isOpen={isPopupOpen} onClose={closePopup} />
+
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 w-full h-full bg-[#012737] text-white transform transition-transform duration-300 ease-in-out ${
@@ -74,12 +82,10 @@ export default function Header() {
         <div className="p-6">
           <div className="flex justify-between items-center">
             <a href="/" className="relative w-40" aria-label="compareprix logo">
-              <Image
+              <img
                 alt="Logo ComparePrix"
                 src="/images/compareprix.svg"
-                layout="fill"
-                objectFit="contain"
-                priority
+                className="w-full h-auto"
               />
             </a>
             <button onClick={toggleMenu} className="text-white">
@@ -102,7 +108,6 @@ export default function Header() {
             <a href="/blog/" className="block text-lg font-semibold">Blogue</a>
             <ThemeSwitcher />
           </nav>
-
         </div>
       </div>
     </header>

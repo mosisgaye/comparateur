@@ -3,6 +3,7 @@ import Faq from "@/components/Faq";
 import HeroSection from "@/components/HeroSection";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import PopularRating from "@/components/PopularRating";
+import Rating from "@/components/Rating";
 
 
 export default async function Index() {
@@ -14,7 +15,7 @@ export default async function Index() {
         <Carousel />
         <NewsletterSignup />
         <PopularRating />
-       
+        <Rating />
         
       </main>
     </>

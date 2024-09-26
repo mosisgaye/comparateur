@@ -36,6 +36,7 @@ const Navbar = () => {
           </Link>
         </div>
 
+     
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8 lg:space-x-12 items-center px-20">
           <Link href="/energie" className="text-black dark:text-white text-[18px] md:text-[20px] font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">

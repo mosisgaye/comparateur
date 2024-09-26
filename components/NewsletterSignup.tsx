@@ -20,7 +20,7 @@ const NewsletterSignup = () => {
           </div>
         </div>
         <p className="text-sm text-white mt-4">
-          Votre email sera collecté par Ariase, marque de Bemove, pour vous informer des offres des opérateurs. Consultez{' '}
+          Votre email sera collecté par compareprix, pour vous informer des offres des opérateurs. Consultez{' '}
           <a href="#" className="underline">
             notre politique de confidentialité
           </a>

@@ -37,23 +37,7 @@ export default function Header() {
         >
           Estimer mon prix
         </Link>
-        <Link
-          href="/"
-          rel="noopener noreferrer"
-          aria-label="espace client"
-          className="hidden xl:flex items-center justify-center w-9 h-9 rounded-full border border-[#ffc65a] text-[#ffc65a] hover:border-[#e0a43c] hover:text-[#e0a43c]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 21c0-4 3-7 7-7s7 3 7 7" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11a4 4 0 100-8 4 4 0 000 8z" />
-          </svg>
-        </Link>
+      
 
         {/* Hamburger Menu for mobile */}
         <button className="xl:hidden ml-2" onClick={toggleMenu}>
@@ -119,23 +103,6 @@ export default function Header() {
             <ThemeSwitcher />
           </nav>
 
-          {/* Action Buttons */}
-          <div className="mt-8 space-y-4 text-center">
-            <a
-              href="https://mon-espace.ekwateur.fr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-[#79CE25] text-white rounded-full text-center py-3"
-            >
-              Connexion
-            </a>
-            <a
-              href="/contact"
-              className="block border-2 border-[#79CE25] rounded-full text-center py-3 text-[#79CE25]"
-            >
-              Contactez-nous
-            </a>
-          </div>
         </div>
       </div>
     </header>

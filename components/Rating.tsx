@@ -30,10 +30,10 @@ const Rating = () => {
     <div className="bg-slate-50 dark:bg-[#0f2433] py-20 px-4">
       {/* Title and Subtitle */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-black dark:text-slate-50 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-slate-50 mb-4">
           Ce que nos clients disent d'Ekwateur
         </h2>
-        <p className="text-lg text-black dark:text-white">
+        <p className="text-sm md:text-lg text-black dark:text-white max-w-3xl mx-auto">
           Vos <span className="underline text-blue-400">avis clients</span> nous permettent chaque jour de nous améliorer afin qu’en tant que fournisseur d’énergie verte on puisse vous proposer des offres d’énergie renouvelable toujours plus proches de vos attentes et de votre budget.
         </p>
       </div>
@@ -45,9 +45,9 @@ const Rating = () => {
       </div>
 
       {/* Review Cards */}
-      <div className="flex justify-center space-x-6 ">
+      <div className="flex flex-wrap justify-center gap-6 ">
         {reviews.map((review, index) => (
-          <div key={index} className="bg-[#fff] dark:bg-[#012737] w-80 p-6 rounded-xl shadow-lg text-black dark:text-white relative">
+          <div key={index} className="bg-[#fff] dark:bg-[#012737] w-full sm:w-80 p-6 rounded-xl shadow-lg text-black dark:text-white relative">
             {/* User Icon */}
             <div className="absolute top-[-30px] left-[10px] w-[50px] h-[50px] bg-[#2d3b47] rounded-full flex items-center justify-center text-white">
               <Image src={review.icon} alt={review.name} width={50} height={50} />

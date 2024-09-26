@@ -12,43 +12,32 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50  bg-[#f0f3ff] dark:bg-[#012737] text-black dark:text-white px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-[#f0f3ff] dark:bg-[#012737] text-black dark:text-white px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
       {/* Logo */}
-
-      <div className="flex items-center px-20">
-          <Link href="/">
-            <img className="w-[124px] h-[77px] md:w-[124px] md:h-[77px]" src="/images/compareprix.svg" alt="Logo" />
-          </Link>
-        </div>
-
+      <div className="flex items-center px-10">
+        <Link href="/">
+          <img className="w-[124px] h-[77px] md:w-[124px] md:h-[77px]" src="/images/compareprix.svg" alt="Logo" />
+        </Link>
+      </div>
 
       {/* Navigation Links for desktop */}
-      <nav className="hidden xl:flex  space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
-        <a href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">
-         Énergie
-        </a>
-        <a href="/telecom/" className="mx-2 text-lg font-semibold hover:text-gray-400">
-         Télécom
-        </a>
-       
-        <a href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">
-        Esim
-        </a>
-        <a href="/blog/" className="mx-2 text-lg font-semibold hover:text-gray-400">
-          Blogue
-        </a>
+      <nav className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
+        <a href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</a>
+        <a href="/telecom/" className="mx-2 text-lg font-semibold hover:text-gray-400">Télécom</a>
+        <a href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">Esim</a>
+        <a href="/blog/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</a>
         <ThemeSwitcher />
       </nav>
 
       {/* Action Buttons */}
       <nav className="flex items-center">
-        <a
+        <Link
           href="https://souscription.ekwateur.fr/"
           className="bg-[#79CE25] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
         >
           Estimer mon prix
-        </a>
-        <a
+        </Link>
+        <Link
           href="/"
           rel="noopener noreferrer"
           aria-label="espace client"
@@ -61,20 +50,10 @@ export default function Header() {
             stroke="currentColor"
             className="w-6 h-6"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 21c0-4 3-7 7-7s7 3 7 7"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 11a4 4 0 100-8 4 4 0 000 8z"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 21c0-4 3-7 7-7s7 3 7 7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11a4 4 0 100-8 4 4 0 000 8z" />
           </svg>
-        </a>
+        </Link>
 
         {/* Hamburger Menu for mobile */}
         <button className="xl:hidden ml-2" onClick={toggleMenu}>
@@ -84,7 +63,7 @@ export default function Header() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="w-8 h-8 text-white"
+              className="w-8 h-8 text-black dark:text-white"
             >
               <path d="M5 17h14M5 12h14M5 7h14" />
             </svg>
@@ -94,7 +73,7 @@ export default function Header() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="w-8 h-8 text-white"
+              className="w-8 h-8 text-black"
             >
               <path d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -110,13 +89,9 @@ export default function Header() {
       >
         <div className="p-6">
           <div className="flex justify-between items-center">
-            <a
-              href="/"
-              className="relative w-40"
-              aria-label="ekwateur logo"
-            >
+            <a href="/" className="relative w-40" aria-label="compareprix logo">
               <Image
-                alt="Logo Ekwateur"
+                alt="Logo ComparePrix"
                 src="/images/compareprix.svg"
                 layout="fill"
                 objectFit="contain"
@@ -136,26 +111,16 @@ export default function Header() {
             </button>
           </div>
 
-          <nav className="mt-10 space-y-4">
-            <a href="/offres-energie/" className="block text-lg font-semibold">
-              Nos offres d'énergie
-            </a>
-            <a href="/produits-et-services/" className="block text-lg font-semibold">
-              Nos produits et services
-            </a>
-            <a href="/demenagement-electricite-gaz/" className="block text-lg font-semibold">
-              Déménagement
-            </a>
-            <a href="/a-propos/" className="block text-lg font-semibold">
-              À propos
-            </a>
-            <a href="/blog/" className="block text-lg font-semibold">
-              Blog
-            </a>
+          <nav className="mt-10 space-y-4 text-center">
+            <a href="/energie/" className="block text-lg font-semibold">Énergie</a>
+            <a href="/telecom/" className="block text-lg font-semibold">Télécom</a>
+            <a href="/esim/" className="block text-lg font-semibold">Esim</a>
+            <a href="/blog/" className="block text-lg font-semibold">Blogue</a>
+            <ThemeSwitcher />
           </nav>
 
-          {/* Buttons */}
-          <div className="mt-8 space-y-4">
+          {/* Action Buttons */}
+          <div className="mt-8 space-y-4 text-center">
             <a
               href="https://mon-espace.ekwateur.fr/"
               target="_blank"

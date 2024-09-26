@@ -25,7 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <Head>
-        {/* Adding the Cookiebot script in the <head> */}
+      <script dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-P4RJN9DT');`
+        }} />
         <script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
@@ -33,17 +39,9 @@ export default function RootLayout({
           data-blockingmode="auto"
           type="text/javascript"
         />
-        {/* Google Tag Manager script in the <head> */}
-        <script dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-P4RJN9DT');`
-        }} />
+   
       </Head>
       <body className="bg-background text-foreground dark:bg-[#012737]">
-        {/* Google Tag Manager (noscript) just after <body> */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P4RJN9DT"
@@ -62,6 +60,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=d747ff48-3194-452d-be17-cf1203ca346b"> </script>
       </body>
     </html>
   );

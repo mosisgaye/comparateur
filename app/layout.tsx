@@ -1,11 +1,11 @@
+import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
-import Link from "next/link";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Head from "next/head"; // Import the Head component
+import Head from "next/head"; 
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -13,8 +13,10 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Compareprix | comparateur des offres en énergie et en télécommunication",
-  description: "Comparateur des offres en énergie et en télécommunication en France et en Belgique",
+  title:
+    "Compareprix | comparateur des offres en énergie et en télécommunication",
+  description:
+    "Comparateur des offres en énergie et en télécommunication en France et en Belgique",
 };
 
 export default function RootLayout({
@@ -25,13 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <Head>
-      <script dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-P4RJN9DT');`
-        }} />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PJ9RE52R47"
+        ></script>
+
         <script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
@@ -39,17 +39,9 @@ export default function RootLayout({
           data-blockingmode="auto"
           type="text/javascript"
         />
-   
       </Head>
+      <GoogleTagManager gtmId="GTM-P4RJN9DT" />
       <body className="bg-background text-foreground dark:bg-[#012737]">
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-P4RJN9DT"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -60,7 +52,13 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
-        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=d747ff48-3194-452d-be17-cf1203ca346b"> </script>
+        <script
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=d747ff48-3194-452d-be17-cf1203ca346b"
+        >
+          {" "}
+        </script>
+        <GoogleAnalytics gaId="G-PJ9RE52R47" />
       </body>
     </html>
   );

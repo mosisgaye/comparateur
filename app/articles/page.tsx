@@ -4,6 +4,13 @@ import NewsletterSignup from '@/components/NewsletterSignup';
 import { createClient } from '@/utils/supabase/server';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+// Exportation de l'objet Metadata
+export const metadata: Metadata = {
+  title: "Blog Télécom & Énergie - Actualités, Aide et Découvertes",
+  description: "Découvrez les dernières actualités et tendances du secteur des télécommunications et de l'énergie. Nos articles vous apportent aide, conseils et découvertes pour mieux comprendre ces industries en évolution.",
+}
 
 export default async function Notes() {
   const supabase = createClient();

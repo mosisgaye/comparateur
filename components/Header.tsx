@@ -30,7 +30,7 @@ export default function Header() {
         <a href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</a>
         <a href="/telecom/" className="mx-2 text-lg font-semibold hover:text-gray-400">Télécom</a>
         <a href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">Esim</a>
-        <a href="/blog/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</a>
+        <a href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</a>
         <ThemeSwitcher />
       </nav>
 
@@ -105,7 +105,7 @@ export default function Header() {
             <a href="/energie/" className="block text-lg font-semibold">Énergie</a>
             <a href="/telecom/" className="block text-lg font-semibold">Télécom</a>
             <a href="/esim/" className="block text-lg font-semibold">Esim</a>
-            <a href="/blog/" className="block text-lg font-semibold">Blogue</a>
+            <a href="/articles/" className="block text-lg font-semibold">Blogue</a>
             <ThemeSwitcher />
           </nav>
         </div>

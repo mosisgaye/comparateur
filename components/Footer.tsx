@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container py-10 bg-[#012737] dark:bg-[#012737] ">
         <div className="flex w-full items-center max-md:flex-col">
           <div className="small-compact flex flex-1 items-center justify-center gap-5">
-            <p className="text-p5 transition-all duration-500 hover:text-p1 text-white">
+            <p className="text-p5 transition-all duration-500 hover:text-p1 text-white px-5">
             © 2024 ComparePrix. Tous droits réservés.
             </p>
           </div>

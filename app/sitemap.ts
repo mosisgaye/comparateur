@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.5,
       },
       {
-        url: 'https://compareprix.net/blog',
+        url: 'https://compareprix.net/articles',
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.5,

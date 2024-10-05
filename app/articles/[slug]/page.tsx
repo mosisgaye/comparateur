@@ -1,6 +1,7 @@
 import { createClient } from '@/utils/supabase/server';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
 interface BlogPostProps {
   params: { slug: string };
@@ -11,7 +12,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   const supabase = createClient();
   const { data: article } = await supabase
     .from('articles')
-    .select('titre, description')
+    .select('titre, description, paragraphe')
     .eq('id', params.slug)
     .single();
 
@@ -42,9 +43,10 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <article className="bg-white shadow-lg rounded-lg overflow-hidden">
+      <NewsletterSignup/>
+      <article className="bg-white dark:bg-[#012737] shadow-lg rounded-lg overflow-hidden">
         {/* Image Section */}
-        <div className="relative h-64 bg-gray-200">
+        <div className="relative h-80 bg-gray-200">
           <img 
             src={article.image_url} 
             alt={article.titre} 
@@ -53,12 +55,15 @@ export default async function BlogPost({ params }: BlogPostProps) {
         </div>
 
         {/* Content Section */}
-        <div className="p-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">{article.titre}</h1>
-          <p className="text-gray-600 mb-6">{article.description}</p>
+        <div className="p-8">
+          <h1 className="text-4xl font-bold text-[#111] dark:text-[#fff] mb-6">{article.titre}</h1>
+          <p className="text-lg text-gray-700 mb-6 dark:text-[#ddd] leading-relaxed">{article.description}</p>
+          
+          {/* Paragraph Section */}
+          <p className="text-md dark:text-[#eee] mb-6 leading-8">{article.paragraphe}</p> 
 
           {/* Additional Information */}
-          <div className="flex justify-between items-center text-sm text-gray-500">
+          <div className="flex justify-between items-center text-sm dark:text-[#ccc]">
             <span>Publié le : {new Date(article.created_at).toLocaleDateString()}</span>
             <span>{article.author}</span>
           </div>
@@ -66,8 +71,8 @@ export default async function BlogPost({ params }: BlogPostProps) {
       </article>
 
       {/* Back to Articles Button */}
-      <div className="mt-8">
-        <a href="/articles" className="inline-block bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-700 transition duration-300 ease-in-out">
+      <div className="mt-12 text-center">
+        <a href="/articles" className="inline-block bg-gradient-to-r from-blue-600 to-blue-400 text-white py-3 px-6 rounded-full shadow-lg hover:from-blue-700 hover:to-blue-500 transition-all duration-300 ease-in-out">
           Retour aux articles
         </a>
       </div>

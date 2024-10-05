@@ -8,7 +8,7 @@ const Carousel = () => {
         <div className="row">
           <div className="col-xs-12">
             <h2 className="providers-carousel--title text-gray-900 dark:text-white">
-              Nous comparons pour vous tous les fournisseurs en Énergie:
+              Nous comparons les fournisseurs en Énergie et Télécoms
             </h2>
           </div>
         </div>
@@ -20,101 +20,95 @@ const Carousel = () => {
               <div className="providers-carousel__slider__slide-track">
                 {[
                   {
-                    src: "https://www.mega.be/images/svg/logo-mega.svg",
-                    alt: "Beobank",
+                    src: "https://dte.ohm-energie.com/?a=P512BA75828231D17",
+                    alt: "ohm-logo",
                     height: 100,
                     width: 200,
                   },
                   {
                     src: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Logo-engie.svg",
-                    alt: "DHB Bank",
+                    alt: "enie-logo",
                     height: 100,
                     width: 131,
                   },
                   {
-                    src: "https://upload.wikimedia.org/wikipedia/fr/f/f7/Logo_TotalEnergies.svg",
-                    alt: "Mozzeno",
+                    src: "https://www.auchantelecom.fr/themes/custom/maya/logo.svg",
+                    alt: "auchantelecom-logo",
                     height: 44,
                     width: 200,
                   },
                   {
-                    src: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Eneco_logo.png",
-                    alt: "Cofidis",
+                    src: "https://www.nrjmobile.fr/sites/default/files/2024-05/logo-nrj_0.svg",
+                    alt: "nrjmobile-logo",
                     height: 157,
                     width: 200,
                   },
                   {
-                    src: "https://upload.wikimedia.org/wikipedia/fr/c/c6/Logo_Luminus.svg",
-                    alt: "Elantis",
+                    src: "https://upload.wikimedia.org/wikipedia/commons/1/12/Logo-YouPrice.svg",
+                    alt: "Logo-YouPrice",
                     height: 67,
                     width: 125,
                   },
                   {
-                    src: "https://cdn-aus.aglty.io/frank-energy/Attachments/NewItems/logo_20230517214229_0.svg",
-                    alt: "Alphacredit",
-                    height: 67,
-                    width: 125,
-                  },
-                  {
-                    src: "https://api.comparateur.be/uploads/media/file_6123804d132fa5.54814991.svg",
-                    alt: "Aviza",
-                    height: 95,
-                    width: 200,
-                  },
-                  {
-                    src: "https://trevion.be/wp-content/uploads/2021/05/logo-hd.svg",
-                    alt: "Cardif",
-                    height: 42,
-                    width: 200,
-                  },
-                  {
-                    src: "https://www.octaplus.be/static/img/logo.png",
-                    alt: "Beobank",
+                    src: "https://dte.ohm-energie.com/?a=P512BA75828231D17",
+                    alt: "ohm-logo",
                     height: 100,
                     width: 200,
                   },
                   {
-                    src: "https://www.elegant.be/Assets/images/FR-Logo_elegant-RGB-255x114.png",
-                    alt: "DHB Bank",
+                    src: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Logo-engie.svg",
+                    alt: "enie-logo",
                     height: 100,
                     width: 131,
                   },
                   {
-                    src: "https://api.comparateur.be/uploads/media/file_6123823b305135.38730196.svg",
-                    alt: "Mozzeno",
+                    src: "https://www.auchantelecom.fr/themes/custom/maya/logo.svg",
+                    alt: "auchantelecom-logo",
                     height: 44,
                     width: 200,
                   },
                   {
-                    src: "https://api.comparateur.be/uploads/media/file_61237f00acc5e0.61590635.png",
-                    alt: "Cofidis",
+                    src: "https://www.nrjmobile.fr/sites/default/files/2024-05/logo-nrj_0.svg",
+                    alt: "nrjmobile-logo",
                     height: 157,
                     width: 200,
                   },
                   {
-                    src: "https://api.comparateur.be/uploads/media/file_61237f4521afc1.91464779.png",
-                    alt: "Elantis",
+                    src: "https://upload.wikimedia.org/wikipedia/commons/1/12/Logo-YouPrice.svg",
+                    alt: "Logo-YouPrice",
                     height: 67,
                     width: 125,
                   },
                   {
-                    src: "https://api.comparateur.be/uploads/media/file_6123806ff2eb18.04915272.png",
-                    alt: "Alphacredit",
+                    src: "https://dte.ohm-energie.com/?a=P512BA75828231D17",
+                    alt: "ohm-logo",
+                    height: 100,
+                    width: 200,
+                  },
+                  {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Logo-engie.svg",
+                    alt: "enie-logo",
+                    height: 100,
+                    width: 131,
+                  },
+                  {
+                    src: "https://www.auchantelecom.fr/themes/custom/maya/logo.svg",
+                    alt: "auchantelecom-logo",
+                    height: 44,
+                    width: 200,
+                  },
+                  {
+                    src: "https://www.nrjmobile.fr/sites/default/files/2024-05/logo-nrj_0.svg",
+                    alt: "nrjmobile-logo",
+                    height: 157,
+                    width: 200,
+                  },
+                  {
+                    src: "https://upload.wikimedia.org/wikipedia/commons/1/12/Logo-YouPrice.svg",
+                    alt: "Logo-YouPrice",
                     height: 67,
                     width: 125,
-                  },
-                  {
-                    src: "https://api.comparateur.be/uploads/media/file_6123807dab54d5.24968359.png",
-                    alt: "Aviza",
-                    height: 95,
-                    width: 200,
-                  },
-                  {
-                    src: "https://api.comparateur.be/uploads/media/66a201a902e63.svg",
-                    alt: "Cardif",
-                    height: 42,
-                    width: 200,
-                  },
+                  }
                 ].map((provider, index) => (
                   <div className="providers-carousel__slider__slide-track--slide" key={index}>
                     <img

@@ -1,23 +1,33 @@
+import Link from 'next/link'; // Importation du composant Link de Next.js
 import { socials } from "@/constants/index";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#012737]  dark:bg-[#012737] ">
-      <div className="container py-10 bg-[#012737] dark:bg-[#012737] ">
+    <footer className="bg-[#012737] dark:bg-[#012737]">
+      <div className="container py-10 bg-[#012737] dark:bg-[#012737]">
         <div className="flex w-full items-center max-md:flex-col">
           <div className="small-compact flex flex-1 items-center justify-center gap-5">
             <p className="text-p5 transition-all duration-500 hover:text-p1 text-white px-5">
-            © 2024 ComparePrix. Tous droits réservés.
+              © 2024 ComparePrix.
             </p>
           </div>
 
           <div className="flex items-center justify-center sm:ml-auto gap-6">
-            <p className="legal-after text-p5 transition-all duration-500 hover:text-p1 text-white">
-              Politique de confidentialité
-            </p>
-            <p className="text-p5 transition-all duration-500 hover:text-p1 text-white mr-6">
-              Condition générale
-            </p>
+            <Link href="/mentions-legales">
+              <p className="legal-after text-p5 transition-all duration-500 hover:text-p1 text-white cursor-pointer">
+                Mentions légales
+              </p>
+            </Link>
+            <Link href="/conditions-generales">
+              <p className="text-p5 transition-all duration-500 hover:text-p1 text-white mr-6 cursor-pointer">
+                Conditions générales
+              </p>
+            </Link>
+            <Link href="/politique-cookies">
+              <p className="text-p5 transition-all duration-500 hover:text-p1 text-white mr-6 cursor-pointer">
+                Cookies
+              </p>
+            </Link>
 
             {/* Ajout de l'espace ici */}
             <div className="flex items-center justify-center ml-6">

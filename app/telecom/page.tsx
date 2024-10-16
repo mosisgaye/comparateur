@@ -1,7 +1,8 @@
 import React from 'react'
+
 import DaisyconTool from '@/components/DaisyconTool'
-import HeroSection from '@/components/HeroSection'
 import type { Metadata } from 'next'
+import Carousel from '@/components/Carousel'
 
 // Exportation de l'objet Metadata
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div>
-      <HeroSection />
+      <Carousel />
       <DaisyconTool />
     </div>
   )

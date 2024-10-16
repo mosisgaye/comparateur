@@ -11,7 +11,6 @@
   --btn-text-color-light: #FFFFFF;
 }
 
-/* Mode clair par défaut */
 body {
   background-color: var(--bg-color-light);
   color: var(--text-color-light);
@@ -529,5 +528,202 @@ textarea::placeholder {
 
 
 
+/* Bouton primaire */
+.btn_primary {
+  color: #FFFFFF !important;
+  background-color: #79CE25 !important;
+}
+
+/* Mode sombre */
+body.dark {
+  background-color: #012737 !important;
+  color: #FFFFFF !important;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  overflow-x: hidden;
+  text-underline-offset: .25em;
+  font-family: 'Poppins', sans-serif;
+}
+*,*:before,*:after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb
+}
+
+/* Ajoutez ceci à votre fichier globals.css */
+.max-w-screen-xl {
+  max-width: 1200px; /* Ajustez cette valeur selon vos besoins */
+  margin: 0 auto; /* Centre le contenu */
+  padding: 0 1rem; /* Ajoutez un padding pour éviter que le contenu touche les bords */
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  /* Séparer les sections */
+  align-items: flex-start;
+  max-width: 85%;
+  margin: auto;
+  padding: 20px;
+  gap: 20px;
+  /* Espace entre les sections */
+}
+
+.text-section {
+  flex: 1;
+  padding: 20px;
+  margin-right: 2rem;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.text-section p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.compare-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #79CE25;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.compare-button:hover {
+  background-color: #67b721;
+}
+
+/* Section de la carte */
+.card-section {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  margin-right: 2.5rem;
+  transform: scale(0.85);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+
+  /* Ajouter un padding pour séparer les sections */
+}
+
+
+.card {
+  background-color: #fff;
+  border: 3px solid #9BEC00;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-logo {
+  height: 4rem;
+  border-radius: 0.75rem;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-details span {
+  display: block;
+}
+
+.card .text-left span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card .text-right span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+
+.offer-button:hover {
+  background-color: #67b721;
+}
+
+/* Styles spécifiques au carrousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  height: 400px;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  /* 3 items */
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  transform: translateX(0);
+}
+
+
+button#prev, button#next {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+button#prev:hover, button#next:hover {
+  opacity: 0.7;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: white;
+}
 
 

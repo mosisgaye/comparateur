@@ -28,12 +28,7 @@ export default function RootLayout({
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <Head>
         {/* Script Mailchimp */}
-        <script
-          id="mcjs"
-          dangerouslySetInnerHTML={{
-            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
-          }}
-        />
+   
 
         {/* Scripts existants */}
         <script
@@ -46,6 +41,13 @@ export default function RootLayout({
           data-cbid="081766f4-b9a1-41f5-b8d2-3dadb5bd1e10"
           data-blockingmode="auto"
           type="text/javascript"
+        />
+
+             <script
+          id="mcjs"
+          dangerouslySetInnerHTML={{
+            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
+          }}
         />
       </Head>
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />

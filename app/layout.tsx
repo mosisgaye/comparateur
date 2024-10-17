@@ -1,5 +1,5 @@
 import { GoogleTagManager } from "@next/third-parties/google";
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
@@ -27,9 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <Head>
-        {/* Script Mailchimp */}
-   
-
         {/* Scripts existants */}
         <script
           async
@@ -43,13 +40,17 @@ export default function RootLayout({
           type="text/javascript"
         />
 
-             <script
-          id="mcjs"
+        {/* Script Mailchimp */}
+        <script
           dangerouslySetInnerHTML={{
-            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
+            __html: `!function(c,h,i,m,p){
+          m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,
+          p.parentNode.insertBefore(m,p)
+        }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
           }}
         />
       </Head>
+
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />
       <body className="bg-background text-foreground dark:bg-[#012737]">
         <ThemeProvider

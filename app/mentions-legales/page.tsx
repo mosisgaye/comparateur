@@ -19,9 +19,8 @@ const MentionsLegales = () => {
         <h2 className="text-2xl font-semibold mb-2">Éditeur</h2>
         <p>Optima Outsourcing CV - Karel De Preterlei 61 2140 Antwerpen</p>
         <p>RCS Rennes</p>
-        <p>SIREN : BE 0797.493.220</p>
+        <p>Numéro d'entreprise : BE 0797.493.220</p>
         <p>N° de TVA : BE0797493220</p>
-        <p>ORIAS : 20002587</p>
         <p>Capital : 10000 €</p>
         <p>Directeur de publication : Mohamed Bouzambou</p>
         <p>N° de téléphone : +32 (0)4 97 603 703</p>

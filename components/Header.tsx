@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from 'react';
 import Link from 'next/link';
 import { ThemeSwitcher } from './theme-switcher';
@@ -20,8 +20,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-[#f0f3ff] dark:bg-[#012737] text-black dark:text-white px-4 h-12 md:px-10 md:h-20 flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center px-10">
-        <Link href="/">
-          <img className="w-[124px] h-[77px] md:w-[124px] md:h-[77px]" src="/images/compareprix.svg" alt="Logo" />
+        <Link href="/" aria-label="Retourner à l'accueil ComparePrix">
+          <img className="w-[124px] h-[77px] md:w-[124px] md:h-[77px]" src="/images/compareprix.svg" alt="Logo ComparePrix" />
         </Link>
       </div>
 
@@ -40,12 +40,13 @@ export default function Header() {
         <button
           onClick={openPopup}
           className="bg-[#79CE25] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
+          aria-label="Parler à un expert"
         >
           Parlez à un expert
         </button>
 
         {/* Hamburger Menu for mobile */}
-        <button className="xl:hidden ml-2" onClick={toggleMenu}>
+        <button className="xl:hidden ml-2" onClick={toggleMenu} aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}>
           {!isMenuOpen ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,14 +82,14 @@ export default function Header() {
       >
         <div className="p-6">
           <div className="flex justify-between items-center">
-            <a href="/" className="relative w-40" aria-label="compareprix logo">
+            <a href="/" className="relative w-40" aria-label="Retourner à l'accueil ComparePrix">
               <img
                 alt="Logo ComparePrix"
                 src="/images/compareprix.svg"
                 className="w-full h-auto"
               />
             </a>
-            <button onClick={toggleMenu} className="text-white">
+            <button onClick={toggleMenu} className="text-white" aria-label="Fermer le menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

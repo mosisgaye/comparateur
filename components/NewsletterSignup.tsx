@@ -9,12 +9,20 @@ const NewsletterSignup = () => {
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">
           <div className="flex items-center w-full md:w-auto">
+            <label htmlFor="email" className="sr-only">
+              Adresse e-mail
+            </label>
             <input
               type="email"
+              id="email"
               placeholder="Votre adresse mail"
               className="py-3 px-4 rounded-l-md text-black bg-white w-full md:w-80 focus:outline-none dark:bg-gray-800 dark:text-white"
+              aria-label="Entrez votre adresse e-mail pour vous inscrire"
             />
-            <button className="bg-red-500 text-white py-3 px-6 rounded-r-md font-semibold hover:bg-red-600 transition-colors">
+            <button
+              className="bg-red-500 text-white py-3 px-6 rounded-r-md font-semibold hover:bg-red-600 transition-colors"
+              aria-label="Cliquez pour vous inscrire à la newsletter"
+            >
               Je m'inscris
             </button>
           </div>

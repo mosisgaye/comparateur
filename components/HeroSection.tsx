@@ -29,11 +29,11 @@ const HeroSection = () => {
           <div className="grid grid-cols-3 gap-4 bg-white dark:bg-[#012737] shadow-lg rounded-lg p-6">
             <div className="flex flex-col items-center">
               <div className="text-3xl text-blue-600 dark:text-white">⚡</div>
-              <div className="font-semibold text-gray-700 dark:text-gray-300 mt-2">Électricité + Gaz</div>
+              <div className="font-semibold text-gray-700 dark:text-gray-300 mt-2">Électricité</div>
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl text-blue-600 dark:text-white">🔥</div>
-              <div className="font-semibold text-gray-700 dark:text-gray-300 mt-2">Électricité</div>
+              <div className="font-semibold text-gray-700 dark:text-gray-300 mt-2">Gaz</div>
             </div>
             <div className="flex flex-col items-center">
             <div className="text-3xl text-blue-600 dark:text-white">📶</div>

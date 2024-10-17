@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Analytics } from "@vercel/analytics/react"
 import Head from "next/head";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -68,6 +69,7 @@ export default function RootLayout({
           src="https://static.zdassets.com/ekr/snippet.js?key=d747ff48-3194-452d-be17-cf1203ca346b"
         />
         <GoogleAnalytics gaId="G-PJ9RE52R47" />
+        <Analytics />
       </body>
     </html>
   );

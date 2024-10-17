@@ -34,32 +34,20 @@ export default function RootLayout({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-PJ9RE52R47"
         ></script>
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="081766f4-b9a1-41f5-b8d2-3dadb5bd1e10"
-          data-blockingmode="auto"
-          type="text/javascript"
-        />
+    
 
-        {/* Script Mailchimp */}
+        {/* Nouveau script Mailchimp */}
         <script
+          id="mcjs"
           dangerouslySetInnerHTML={{
             __html: `!function(c,h,i,m,p){
-          m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,
-          p.parentNode.insertBefore(m,p)
-        }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
+              m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,
+              p.parentNode.insertBefore(m,p)
+            }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
           }}
         />
 
-        {/* Script Leadsy.ai */}
-        <script
-          id="vtag-ai-js"
-          async
-          src="https://r2.leadsy.ai/tag.js"
-          data-pid="n2FIKxF5STNWJsra"
-          data-version="062024"
-        ></script>
+    
       </Head>
 
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />

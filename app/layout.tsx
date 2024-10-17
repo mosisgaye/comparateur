@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Head from "next/head";
 
@@ -51,6 +51,15 @@ export default function RootLayout({
         }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
           }}
         />
+
+        {/* Script Leadsy.ai */}
+        <script
+          id="vtag-ai-js"
+          async
+          src="https://r2.leadsy.ai/tag.js"
+          data-pid="n2FIKxF5STNWJsra"
+          data-version="062024"
+        ></script>
       </Head>
 
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />

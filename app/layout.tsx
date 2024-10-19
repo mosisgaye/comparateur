@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import Head from "next/head";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -28,28 +27,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
-      <Head>
-        {/* Scripts existants */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-PJ9RE52R47"
-        ></script>
-    
-
-        {/* Nouveau script Mailchimp */}
-        <script
-          id="mcjs"
-          dangerouslySetInnerHTML={{
-            __html: `!function(c,h,i,m,p){
-              m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,
-              p.parentNode.insertBefore(m,p)
-            }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");`,
-          }}
-        />
-
-    
-      </Head>
-
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />
       <body className="bg-background text-foreground dark:bg-[#012737]">
         <ThemeProvider

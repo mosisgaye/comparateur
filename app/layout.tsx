@@ -46,6 +46,17 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-PJ9RE52R47" />
         <Analytics />
         <SpeedInsights />
+
+        {/* Script pour le consentement des cookies */}
+        <script src="https://cdn.cookiehub.eu/c2/04c588a3.js"></script>
+        <script type="text/javascript">
+          {`
+            document.addEventListener("DOMContentLoaded", function(event) {
+              var cpm = {};
+              window.cookiehub.load(cpm);
+            });
+          `}
+        </script>
       </body>
     </html>
   );

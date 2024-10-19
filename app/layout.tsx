@@ -57,6 +57,18 @@ export default function RootLayout({
             });
           `}
         </script>
+
+        {/* Script Mailchimp */}
+        <script id="mcjs">
+          {`!function(c,h,i,m,p){
+              m=c.createElement(h),
+              p=c.getElementsByTagName(h)[0],
+              m.async=1,
+              m.src=i,
+              p.parentNode.insertBefore(m,p)
+            }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");
+          `}
+        </script>
       </body>
     </html>
   );

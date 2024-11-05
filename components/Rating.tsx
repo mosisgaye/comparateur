@@ -31,7 +31,7 @@ const Rating = () => {
       {/* Title and Subtitle */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-slate-50 mb-4">
-          Ce que nos clients disent d'Ekwateur
+          Ce que nos clients disent
         </h2>
         <p className="text-sm md:text-lg text-black dark:text-white max-w-3xl mx-auto">
           Vos <span className="underline text-blue-400">avis clients</span> nous permettent chaque jour de nous améliorer afin qu’en tant que fournisseur d’énergie verte on puisse vous proposer des offres d’énergie renouvelable toujours plus proches de vos attentes et de votre budget.

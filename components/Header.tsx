@@ -28,10 +28,9 @@ export default function Header() {
       {/* Navigation Links for desktop */}
       <nav className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
         <a href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</a>
-        <a href="/telecom/" className="mx-2 text-lg font-semibold hover:text-gray-400">Télécom</a>
+        <a href="/forfait-mobile/" className="mx-2 text-lg font-semibold hover:text-gray-400">Forfait mobile</a>
         <a href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">Esim</a>
         <a href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</a>
-        <ThemeSwitcher />
       </nav>
 
       {/* Action Buttons */}
@@ -104,10 +103,10 @@ export default function Header() {
 
           <nav className="mt-10 space-y-4 text-center">
             <a href="/energie/" className="block text-lg font-semibold">Énergie</a>
-            <a href="/telecom/" className="block text-lg font-semibold">Télécom</a>
+            <a href="/forfait-mobile/" className="block text-lg font-semibold">Forfait mobile</a>
             <a href="/esim/" className="block text-lg font-semibold">Esim</a>
             <a href="/articles/" className="block text-lg font-semibold">Blogue</a>
-            <ThemeSwitcher />
+           
           </nav>
         </div>
       </div>

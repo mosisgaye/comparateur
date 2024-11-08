@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className} suppressHydrationWarning>
+    <html lang="fr" className={GeistSans.className} suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />
       <body className="bg-background text-foreground dark:bg-[#012737]">
         <ThemeProvider
@@ -39,36 +39,9 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
-        <script
-          id="ze-snippet"
-          src="https://static.zdassets.com/ekr/snippet.js?key=d747ff48-3194-452d-be17-cf1203ca346b"
-        />
         <GoogleAnalytics gaId="G-PJ9RE52R47" />
         <Analytics />
         <SpeedInsights />
-
-        {/* Script pour le consentement des cookies */}
-        <script src="https://cdn.cookiehub.eu/c2/04c588a3.js"></script>
-        <script type="text/javascript">
-          {`
-            document.addEventListener("DOMContentLoaded", function(event) {
-              var cpm = {};
-              window.cookiehub.load(cpm);
-            });
-          `}
-        </script>
-
-        {/* Script Mailchimp */}
-        <script id="mcjs">
-          {`!function(c,h,i,m,p){
-              m=c.createElement(h),
-              p=c.getElementsByTagName(h)[0],
-              m.async=1,
-              m.src=i,
-              p.parentNode.insertBefore(m,p)
-            }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/936adaeb91bfeb4db358a8ed7/1a3171a0f3d273130ffb6a988.js");
-          `}
-        </script>
       </body>
     </html>
   );

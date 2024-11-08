@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={GeistSans.className} suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />
-      <body className="bg-background text-foreground dark:bg-[#012737]">
+      <body className="bg-background text-foreground">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

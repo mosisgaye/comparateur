@@ -1,7 +1,6 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistSans } from "geist/font/sans";
-import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -28,17 +27,11 @@ export default function RootLayout({
   return (
     <html lang="fr" className={GeistSans.className} suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />
-      <body className="bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body>
+     
           <Header />
           {children}
           <Footer />
-        </ThemeProvider>
         <GoogleAnalytics gaId="G-PJ9RE52R47" />
         <Analytics />
         <SpeedInsights />

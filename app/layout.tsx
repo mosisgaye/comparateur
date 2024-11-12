@@ -5,7 +5,8 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -13,10 +14,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title:
-    "Compareprix | comparateur des offres en énergie et en télécommunication",
-  description:
-    "Comparateur des offres en énergie et en télécommunication en France et en Belgique",
+  title: "Compareprix | comparateur des offres en énergie et en télécommunication",
+  description: "Comparateur des offres en énergie et en télécommunication en France et en Belgique",
 };
 
 export default function RootLayout({
@@ -28,10 +27,20 @@ export default function RootLayout({
     <html lang="fr" className={GeistSans.className} suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-P4RJN9DT" />
       <body>
-     
-          <Header />
-          {children}
-          <Footer />
+        {/* Intégration du script CookieHub */}
+        <Script src="https://cdn.cookiehub.eu/c2/04c588a3.js" strategy="afterInteractive" />
+        <Script id="cookiehub-init" strategy="afterInteractive">
+          {`
+            document.addEventListener("DOMContentLoaded", function(event) {
+              var cpm = {};
+              window.cookiehub.load(cpm);
+            });
+          `}
+        </Script>
+        
+        <Header />
+        {children}
+        <Footer />
         <GoogleAnalytics gaId="G-PJ9RE52R47" />
         <Analytics />
         <SpeedInsights />

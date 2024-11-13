@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div>
-      <HeroSection />
+      <HeroSection title={''} description={''} />
       <EnergyTool />
     </div>
   )

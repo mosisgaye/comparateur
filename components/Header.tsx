@@ -27,18 +27,17 @@ export default function Header() {
 
       {/* Navigation Links for desktop */}
       <nav className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
-        <a href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</a>
-        <a href="/forfait-mobile/" className="mx-2 text-lg font-semibold hover:text-gray-400">Forfait mobile</a>
-        <a href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">Esim</a>
-        <a href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</a>
+        <Link href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</Link>
+        <Link href="/forfait-mobile/" className="mx-2 text-lg font-semibold hover:text-gray-400">Forfait mobile</Link>
+        <Link href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">Esim</Link>
+        <Link href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</Link>
       </nav>
 
-      {/* Action Buttons */}
       <nav className="flex items-center">
         {/* Button to open the popup */}
         <button
           onClick={openPopup}
-          className="bg-[#79CE25] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
+          className="hidden md:block bg-[#79CE25] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
           aria-label="Parler à un expert"
         >
           Parlez à un expert
@@ -102,11 +101,10 @@ export default function Header() {
           </div>
 
           <nav className="mt-10 space-y-4 text-center">
-            <a href="/energie/" className="block text-lg font-semibold">Énergie</a>
-            <a href="/forfait-mobile/" className="block text-lg font-semibold">Forfait mobile</a>
-            <a href="/esim/" className="block text-lg font-semibold">Esim</a>
-            <a href="/articles/" className="block text-lg font-semibold">Blogue</a>
-           
+            <Link href="/energie/" className="block text-lg font-semibold">Énergie</Link>
+            <Link href="/forfait-mobile/" className="block text-lg font-semibold">Forfait mobile</Link>
+            <Link href="/esim/" className="block text-lg font-semibold">Esim</Link>
+            <Link href="/articles/" className="block text-lg font-semibold">Blogue</Link>
           </nav>
         </div>
       </div>

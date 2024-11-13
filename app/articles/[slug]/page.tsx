@@ -43,7 +43,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <NewsletterSignup/>
+      <NewsletterSignup title={''} description={''}/>
       <article className="bg-white dark:bg-[#012737] shadow-lg rounded-lg overflow-hidden">
         {/* Image Section */}
         <div className="relative h-80 bg-gray-200">

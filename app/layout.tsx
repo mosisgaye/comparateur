@@ -14,8 +14,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Compareprix | comparateur des offres en énergie et en télécommunication",
-  description: "Comparateur des offres en énergie et en télécommunication en France et en Belgique",
+  title: "Compareprix | Comparateur de Téléphones et Box Internet",
+  description: "Trouvez les meilleures offres de téléphones et de box internet en France. Comparez les prix, les forfaits et les opérateurs pour faire le meilleur choix.",
 };
 
 export default function RootLayout({

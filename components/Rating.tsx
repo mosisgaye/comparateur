@@ -10,7 +10,12 @@ const reviews = [
   { name: "Michel", date: "il y a 4 jours", rating: 5, text: "Rapide et efficace, je recommande vivement!", icon: "/images/5.png" },
 ];
 
-const Rating = () => {
+interface RatingProps {
+  title: string;
+  description: string;
+}
+
+const Rating: React.FC<RatingProps> = ({ title, description }) =>  {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [startIndex, setStartIndex] = useState(0);
 

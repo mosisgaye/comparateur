@@ -6,9 +6,10 @@ interface Offer {
   price: string;
   offer_label: string;
   details_url: string;
+  provider: string; // Ajout de la propriété provider pour l'affichage
 }
 
-export default async function Notes() {
+export default async function MobilePlans() {
   const supabase = createClient();
   const { data: offers, error } = await supabase.from('forfait-mobile').select('*');
 
@@ -37,9 +38,14 @@ export default async function Notes() {
         </a>
       </div>
 
-      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Les forfaits mobiles des opérateurs télécoms</h1>
+      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">
+        Comparez les Meilleurs Forfaits Mobiles des Opérateurs Télécoms
+      </h1>
+      <p className="text-lg text-center mb-6 text-gray-600">
+        Utilisez notre comparateur pour trouver le forfait mobile qui vous convient le mieux et économisez sur votre abonnement.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {offers.map((offer) => (
+        {offers.map((offer: Offer) => (
           <div
             key={offer.id}
             className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl"

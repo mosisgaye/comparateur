@@ -1,12 +1,20 @@
 import React from 'react';
 
-const NewsletterSignup = () => {
+interface NewsletterSignupProps {
+  title: string;
+  description: string;
+}
+
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ title, description }) => {
   return (
     <div className="bg-[#1b28b5] dark:bg-[#012737] py-10">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-white text-3xl font-semibold mb-6">
-          Reprenez le contrôle de vos factures : recevez les meilleures offres et actualités des opérateurs.
+          {title}
         </h2>
+        <p className="text-white mb-4">
+          {description} Inscrivez-vous pour recevoir les meilleures offres de téléphones et de box internet.
+        </p>
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">
           <div className="flex items-center w-full md:w-auto">
             <label htmlFor="email" className="sr-only">
@@ -28,7 +36,7 @@ const NewsletterSignup = () => {
           </div>
         </div>
         <p className="text-sm text-white mt-4">
-          Votre email sera collecté par compareprix, pour vous informer des offres des opérateurs. Consultez{' '}
+          Votre email sera collecté par ComparePrix pour vous informer des offres des opérateurs. Consultez{' '}
           <a href="#" className="underline">
             notre politique de confidentialité
           </a>

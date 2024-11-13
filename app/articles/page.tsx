@@ -60,7 +60,7 @@ export default async function Notes() {
         ))}
       </div>
     </div>
-    <NewsletterSignup />
+    <NewsletterSignup title={''} description={''} />
     <div className= "bg-gray-100 py-5">
       <Faq />
     </div>

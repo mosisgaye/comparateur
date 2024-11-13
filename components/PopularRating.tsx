@@ -1,15 +1,20 @@
 import React from 'react';
 
-const PopularRating = () => {
+interface ComponentProps {
+  title: string;
+  description: string;
+}
+
+const PopularRating: React.FC<ComponentProps> = ({ title, description }) => {
   return (
     <div className="h-auto px-[125px] py-[100px] flex-col justify-center items-center gap-10 flex bg-[#f0f4f7] dark:bg-[#012737]">
       {/* Section Titre */}
       <div className="text-center mb-10">
         <h2 className="text-black dark:text-white text-4xl font-bold leading-tight">
-          Choisissez L'énergie Verte Qui Vous Convient
+          {title}
         </h2>
         <p className="dark:text-gray-300 text-black text-lg leading-relaxed mt-4">
-          Un fournisseur d'énergie verte qui vous propose des offres d’énergie 100% renouvelables, issues de productions locales ou européennes.
+          {description} Comparez les meilleures offres d'énergie et de télécommunications.
         </p>
       </div>
 

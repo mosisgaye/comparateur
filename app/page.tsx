@@ -2,7 +2,6 @@ import Article from "@/components/Article";
 import Banner from "@/components/Banner";
 import Carousel from "@/components/Carousel";
 import FeatureSection from "@/components/FeatureSection";
-import HeroSection from "@/components/HeroSection";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import Rating from "@/components/Rating";
 

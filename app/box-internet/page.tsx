@@ -1,7 +1,7 @@
 import NewsletterSignup from '@/components/NewsletterSignup';
 import { createClient } from '@supabase/supabase-js';
+import {featureSectionContent } from "@/constants/index";
 
-// Interface pour définir la structure des offres
 export interface BoxInternetOffer {
   id: number;
   url_image: string;
@@ -17,7 +17,6 @@ export interface BoxInternetOffer {
 }
 
 export default async function MobilePlans() {
-  // Créer un client Supabase à l'aide des variables d'environnement
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -49,8 +48,9 @@ export default async function MobilePlans() {
         </a>
       </div>
 
-      <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-8">Nos Offres Internet</h1>
-
+      {/* Utilisation du titre et de la description de FeatureSection */}
+      <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-8">{featureSectionContent.title}</h1>
+      <p className="text-center text-gray-600 mb-8">{featureSectionContent.description}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {offers.map((offer: BoxInternetOffer) => (
           <div
@@ -81,9 +81,7 @@ export default async function MobilePlans() {
                   </button>
                 ))}
               </div>
-              <div className="mt-4 text-center">
-                <a href="#" className="text-sm text-blue-600 hover:underline">En savoir plus</a>
-              </div>
+          
             </div>
           </div>
         ))}

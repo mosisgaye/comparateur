@@ -1,10 +1,15 @@
-// Déclarez un type Content pour spécifier la structure des objets
 type Content = {
   title: string;
   description: string;
 };
 
-// Déclarez les objets avec le type Content
+export const cardData = [
+  { id: 1, title: "Le Basic", data: "80 Go", price: "6,99€", details: "Appels & SMS-MMS illimités", logo: "/images/coriolis.png" },
+  { id: 2, title: "Le Relax", data: "160 Go", price: "8,99€", details: "Appels & SMS-MMS illimités", logo: "/images/lebara.png" },
+  { id: 3, title: "Le Connecté", data: "250 Go", price: "12,99€", details: "Appels & SMS-MMS illimités", logo: "/images/sfr.png" },
+  { id: 4, title: "Le Premium", data: "300 Go", price: "16,99€", details: "Appels & SMS-MMS illimités", logo: "/images/you.png" },
+];
+
 export const bannerContent: Content = {
   title: "Comparez les Meilleurs Téléphones et Box Internet",
   description: "Utilisez notre comparateur pour trouver les meilleures offres de téléphones et de box internet en France. Économisez jusqu'à 400€ sur vos abonnements."

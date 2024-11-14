@@ -1,18 +1,13 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import {cardData} from "@/constants/index";
 
 interface BannerProps {
   title: string;
   description: string;
 }
 
-const cardData = [
-  { id: 1, title: "Le Basic", data: "80 Go", price: "6,99€", details: "Appels & SMS-MMS illimités", logo: "/images/coriolis.png" },
-  { id: 2, title: "Le Relax", data: "160 Go", price: "8,99€", details: "Appels & SMS-MMS illimités", logo: "/images/lebara.png" },
-  { id: 3, title: "Le Connecté", data: "250 Go", price: "12,99€", details: "Appels & SMS-MMS illimités", logo: "/images/sfr.png" },
-  { id: 4, title: "Le Premium", data: "300 Go", price: "16,99€", details: "Appels & SMS-MMS illimités", logo: "/images/you.png" },
-];
 
 const Banner: React.FC<BannerProps> = ({ title, description }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +43,6 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
         </button>
       </div>
 
-      {/* Right Side: Animated Cards */}
       <div className="flex-1 flex justify-center">
         <div className="relative w-80 h-64">
           <AnimatePresence>
@@ -62,7 +56,6 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.6 }}
                 >
-                  {/* Display Logo */}
                   <img src={card.logo} alt={`${card.title} logo`} className="w-16 h-16 mb-4" />
                   <div className="text-lg font-semibold text-gray-700">{card.title}</div>
                   <div className="text-5xl font-extrabold text-blue-600">{card.data}</div>

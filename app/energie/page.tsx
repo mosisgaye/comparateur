@@ -1,6 +1,5 @@
 import React from 'react'
 import HeroSection from '@/components/HeroSection'
-import EnergyTool from '@/components/EnergyTool'
 import type { Metadata } from 'next'
 
 // Exportation de l'objet Metadata
@@ -13,7 +12,7 @@ const Page = () => {
   return (
     <div>
       <HeroSection title={''} description={''} />
-      <EnergyTool />
+     
     </div>
   )
 }

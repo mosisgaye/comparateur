@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { ThemeSwitcher } from './theme-switcher';
 import Popup from '@/components/Popup';
 
 export default function Header() {
@@ -27,10 +26,10 @@ export default function Header() {
 
       {/* Navigation Links for desktop */}
       <nav className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
-        <Link href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</Link>
+        <Link href="/box-internet/" className="mx-2 text-lg font-semibold hover:text-gray-400">Box Internet</Link>
         <Link href="/forfait-mobile/" className="mx-2 text-lg font-semibold hover:text-gray-400">Forfait mobile</Link>
-        <Link href="/esim/" className="mx-2 text-lg font-semibold hover:text-gray-400">Esim</Link>
-        <Link href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blogue</Link>
+        <Link href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</Link>
+        <Link href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blog</Link>
       </nav>
 
       <nav className="flex items-center">
@@ -101,10 +100,10 @@ export default function Header() {
           </div>
 
           <nav className="mt-10 space-y-4 text-center">
-            <Link href="/energie/" className="block text-lg font-semibold">Énergie</Link>
+            <Link href="/box-internet/" className="block text-lg font-semibold">Box internet</Link>
             <Link href="/forfait-mobile/" className="block text-lg font-semibold">Forfait mobile</Link>
-            <Link href="/esim/" className="block text-lg font-semibold">Esim</Link>
-            <Link href="/articles/" className="block text-lg font-semibold">Blogue</Link>
+            <Link href="/energie/" className="block text-lg font-semibold">Énergie</Link>
+            <Link href="/articles/" className="block text-lg font-semibold">Blog</Link>
           </nav>
         </div>
       </div>

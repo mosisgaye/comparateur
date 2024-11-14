@@ -7,7 +7,7 @@ interface NewsletterSignupProps {
 
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ title, description }) => {
   return (
-    <div className="bg-[#1b28b5] dark:bg-[#012737] py-10">
+    <div className="bg-[#1b28b5] py-10">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-white text-3xl font-semibold mb-6">
           {title}

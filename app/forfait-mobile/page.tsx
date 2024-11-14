@@ -1,12 +1,15 @@
+import NewsletterSignup from '@/components/NewsletterSignup';
 import { createClient } from '@/utils/supabase/server';
 
 interface Offer {
+  affiliation_url: string | undefined;
   id: number;
-  data_plan: string;
-  price: string;
+  data_volume: string;
+  prix_mensuel: number;
   offer_label: string;
   details_url: string;
-  provider: string; // Ajout de la propriété provider pour l'affichage
+  image_url: string;
+  provider: string;
 }
 
 export default async function MobilePlans() {
@@ -23,7 +26,6 @@ export default async function MobilePlans() {
 
   return (
     <div className="max-w-7xl mx-auto p-4">
-      {/* Bannière SFR centrée au milieu */}
       <div className="text-center mb-8">
         <a
           rel="sponsored"
@@ -55,31 +57,32 @@ export default async function MobilePlans() {
                 {offer.offer_label}
               </span>
             )}
-            {/* Affichage de l'image du logo */}
-            {offer.details_url && (
-              <img
-                src={offer.details_url}
-                alt={`Logo de ${offer.provider}`}
-                className="w-20 h-20 mb-4 object-contain"
-              />
-            )}
-            <p className="text-gray-600 text-lg mb-4">{offer.data_plan}</p>
-            <p className="text-blue-600 text-3xl font-bold mb-4">{offer.price}</p>
+            <img
+              src={offer.image_url}
+              alt={`Logo de ${offer.provider}`}
+              className="w-20 h-20 mb-4 object-contain"
+            />
+            <p className="text-gray-600 text-lg mb-4">{offer.data_volume}</p>
+            <p className="text-blue-600 text-3xl font-bold mb-4">{`${offer.prix_mensuel} €`}</p>
             <a
               href={offer.details_url}
               className="mb-2 inline-block w-full text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 hover:bg-blue-700"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Voir l'offre
             </a>
             <a
-              href={offer.details_url}
+              href={offer.affiliation_url}
               className="text-blue-500 hover:underline text-sm mt-1"
+              
             >
               En savoir plus
             </a>
           </div>
         ))}
       </div>
+      <NewsletterSignup title={''} description={''} />
     </div>
   );
 }

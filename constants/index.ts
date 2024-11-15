@@ -11,7 +11,7 @@ export const cardData = [
 ];
 
 export const bannerContent: Content = {
-  title: "Comparez les Meilleurs Téléphones et Box Internet",
+  title: "Comparez les Meilleurs Box Internet",
   description: "Utilisez notre comparateur pour trouver les meilleures offres de téléphones et de box internet en France. Économisez jusqu'à 400€ sur vos abonnements."
 };
 
@@ -26,7 +26,7 @@ export const featureSectionContent: Content = {
 };
 
 export const ratingContent: Content = {
-  title: "Évaluez Votre Téléphone",
+  title: "Comparez les Meilleurs Forfaits Mobiles",
   description: "Partagez votre avis sur les téléphones que vous avez testés. Aidez d'autres consommateurs à faire des choix éclairés."
 };
 

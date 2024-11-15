@@ -1,6 +1,7 @@
 import React from 'react'
-import HeroSection from '@/components/HeroSection'
+import HeroSection from '@/components/Banner'
 import type { Metadata } from 'next'
+import Banner from '@/components/Banner'
 
 // Exportation de l'objet Metadata
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div>
-      <HeroSection title={''} description={''} />
+      <Banner title={''} description={''} />
      
     </div>
   )

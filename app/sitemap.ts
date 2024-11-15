@@ -9,22 +9,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: 'https://compareprix.net/box-internet',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://compareprix.net/forfait-mobile',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
+    {
       url: 'https://compareprix.net/energie',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: 'https://compareprix.net/telecom',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://compareprix.net/esim',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.5,
     },
     {
       url: 'https://compareprix.net/articles',

@@ -17,7 +17,7 @@ export default async function Notes({ title, description }: NotesProps) {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 text-center py-8">
         {/* Title and description passed as props */}
         <h1 className="text-3xl font-bold text-gray-900 mb-4">{title}</h1>
         <p className="text-lg text-gray-700 mb-6">

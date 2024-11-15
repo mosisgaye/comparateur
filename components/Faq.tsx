@@ -1,31 +1,50 @@
 const Faq = () => {
-    const faqs = [
-      {
-        question: "Quels sont les meilleurs forfaits du moment ?",
-        answer:
-          "Le prix des abonnements et les promotions évoluent en permanence. Concernant les meilleurs forfaits mobile, ils changent chaque semaine avec des séries limitées incluant plusieurs dizaines de Giga d'internet mobile pour moins de 10€, ou encore des forfaits avec des smartphones pas chers voire même offerts.",
-      },
-      {
-        question: "Comment Ariase aide-t-il les consommateurs à choisir ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
-      {
-        question: "Quels sont les principaux services proposés par Ariase ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
-      {
-        question: "Combien d'économies en changeant d'opérateur ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
-      {
-        question: "Ariase est-il indépendant et fiable ?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      },
-    ];
+  
+
+  const faqs = [
+    {
+      question: "Comment ComparePrix m'aide-t-il à trouver l'offre télécom idéale ?",
+      answer:
+        "ComparePrix analyse et compare les offres télécoms disponibles sur le marché français, que ce soit pour les forfaits mobiles, les abonnements internet (fibre, ADSL) ou les téléphones fixes. Grâce à des filtres personnalisés, vous pouvez trier les offres selon vos besoins : quantité de données mobiles, appels illimités, prix, ou encore services inclus (TV, streaming, etc.). Nous mettons également à jour nos bases en temps réel pour vous garantir des informations précises et actuelles.",
+    },
+    {
+      question: "Pourquoi est-il avantageux d'utiliser ComparePrix ?",
+      answer:
+        "Utiliser ComparePrix, c'est économiser du temps et de l'argent. Plutôt que de consulter les sites des opérateurs un par un, vous accédez ici à une vue d'ensemble complète et objective. De plus, nous mettons en lumière les promotions en cours, les séries limitées et les forfaits spécialement conçus pour différents profils (jeunes, familles, professionnels). Vous évitez ainsi les mauvaises surprises et choisissez une offre vraiment adaptée à vos besoins.",
+    },
+    {
+      question: "Les informations fournies par ComparePrix sont-elles fiables et à jour ?",
+      answer:
+        "Oui, nous nous engageons à vous fournir des données fiables et régulièrement mises à jour. Nos partenariats avec les opérateurs télécoms et notre système de veille automatisée nous permettent d'intégrer les changements de prix, les nouvelles promotions et les conditions des offres en temps réel. Vous pouvez donc prendre vos décisions en toute confiance.",
+    },
+    {
+      question: "Quels types d’offres sont comparés sur ComparePrix ?",
+      answer:
+        "ComparePrix compare une large gamme d’offres télécoms : forfaits mobiles avec ou sans engagement, abonnements internet (fibre, ADSL, 4G fixe), offres combinées (box + mobile), et même des solutions professionnelles. Nous incluons également des options spécifiques comme les abonnements internationaux, les forfaits pour les étudiants ou les offres avec smartphone inclus.",
+    },
+    {
+      question: "Combien puis-je économiser en utilisant ComparePrix ?",
+      answer:
+        "En changeant d’opérateur ou en adaptant votre forfait à vos besoins réels, vous pouvez économiser jusqu'à 50% par mois sur vos factures télécoms. Par exemple, un forfait à 30 € par mois peut être remplacé par une offre équivalente à moins de 10 € grâce à une promotion. De même, pour internet, passer à la fibre peut parfois coûter moins cher que votre abonnement ADSL actuel, tout en offrant de meilleures performances.",
+    },
+    {
+      question: "ComparePrix est-il un service gratuit ?",
+      answer:
+        "Oui, ComparePrix est totalement gratuit pour les utilisateurs. Vous n’avez rien à payer pour comparer les offres et accéder à nos conseils. Nous générons nos revenus via des partenariats avec certains opérateurs, mais cela n’affecte en rien l’impartialité de nos recommandations. Notre priorité est de vous aider à faire le meilleur choix.",
+    },
+    {
+      question: "Quelles sont les étapes pour souscrire à une offre via ComparePrix ?",
+      answer:
+        "Souscrire à une offre via ComparePrix est très simple. Une fois que vous avez trouvé une offre qui vous convient, cliquez sur le bouton ‘Souscrire’ ou ‘Voir l’offre’. Vous serez redirigé vers le site officiel de l’opérateur pour finaliser votre souscription. Nous vous accompagnons avec des conseils et des guides pratiques pour que le processus soit rapide et sans tracas.",
+    },
+    {
+      question: "Comment savoir si je peux bénéficier de la fibre optique à mon adresse ?",
+      answer:
+        "ComparePrix propose un test d’éligibilité à la fibre optique directement sur son site. En saisissant votre adresse ou votre code postal, nous vérifions en temps réel les opérateurs qui proposent la fibre dans votre zone. Vous obtenez une liste des offres disponibles avec leurs caractéristiques et leurs tarifs. Cela vous permet de savoir rapidement si vous pouvez passer à un internet plus rapide et plus performant.",
+    },
+  ];
+  
+  
   
     return (
       <div className="max-w-3xl mx-auto p-6 bg-[#f0f4f7] dark:bg-[#012737] text-[#000] rounded-lg shadow-md">

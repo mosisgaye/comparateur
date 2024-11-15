@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "Forfait Mobile - ComparePrix",
+  description: "Découvrez les meilleurs forfaits mobiles et comparez les offres des opérateurs télécoms pour trouver le forfait qui vous convient le mieux.",
+  keywords: ["forfait mobile", "comparateur de forfaits", "meilleur forfait mobile", "prix forfait mobile", "comparatif forfait mobile", "meilleur opérateur mobile", "offres forfait mobile"],
+  robots: "index, follow",
+  openGraph: {
+    title: "Forfait Mobile - ComparePrix",
+    description: "Comparez les meilleurs forfaits mobiles et trouvez l'offre qui vous convient le mieux.",
+    url: "https://compareprix.net/forfait-mobile",
+    type: "website",
+  },
+};
+
+
 import NewsletterSignup from '@/components/NewsletterSignup';
 import { createClient } from '@/utils/supabase/server';
 
@@ -75,6 +89,8 @@ export default async function MobilePlans() {
             <a
               href={offer.affiliation_url}
               className="text-blue-500 hover:underline text-sm mt-1"
+               target="_blank"
+              rel="noopener noreferrer"
               
             >
               En savoir plus

@@ -8,7 +8,7 @@ interface FeatureSectionProps {
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({ title, description }) => (
   <div className="text-center py-8">
-    <h2 className="text-2xl font-bold text-gray-800 mb-4">{title}</h2>
+    <h1 className="text-2xl font-bold text-gray-800 mb-4">{title}</h1>
     <p className="text-gray-600 mb-8">{description}</p>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
       <FeatureCard

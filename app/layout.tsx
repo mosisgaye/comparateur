@@ -1,11 +1,8 @@
-import { GoogleTagManager } from "@next/third-parties/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Head from 'next/head';
-
+import Head from "next/head";
+import Script from "next/script";
 
 const Header = dynamic(() => import("@/components/Header"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
@@ -62,17 +59,33 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-       <Head>   
+      <Head>
         <link rel="canonical" href="https://compareprix.net" />
       </Head>
-      <GoogleTagManager gtmId="GTM-P4RJN9DT" />
-      <body className="bg-gray-50">     
-       <Header />
+
+      <Script
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-P4RJN9DT"
+        strategy="lazyOnload"
+      />
+
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-PJ9RE52R47"
+        strategy="lazyOnload"
+      />
+      <Script id="google-analytics-init" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PJ9RE52R47');
+        `}
+      </Script>
+
+      <body className="bg-gray-50">
+        <Header />
         <main>{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-PJ9RE52R47" />
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

@@ -47,8 +47,8 @@ const Faq = () => {
   
   
     return (
-      <div className="max-w-3xl mx-auto p-6 bg-[#f0f4f7] dark:bg-[#012737] text-[#000] rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold text-[#111] dark:text-white mb-6">
+      <div className="max-w-3xl mx-auto p-6 bg-white text-[#000] py-20 rounded-lg">
+        <h2 className="text-2xl font-semibold text-[#111] mb-6">
           Les réponses à vos questions
         </h2>
         <div className="space-y-4 divide-y divide-white divide-opacity-100">

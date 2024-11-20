@@ -28,7 +28,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ title, description 
               aria-label="Entrez votre adresse e-mail pour vous inscrire"
             />
             <button
-              className="bg-red-500 text-white py-3 px-6 rounded-r-md font-semibold hover:bg-red-600 transition-colors"
+              className="bg-[#B91C1C] text-white py-3 px-6 rounded-r-md font-semibold hover:bg-red-600 transition-colors"
               aria-label="Cliquez pour vous inscrire à la newsletter"
             >
               Je m'inscris

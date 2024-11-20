@@ -11,7 +11,8 @@ export const metadata = {
   },
 };
 
-
+import Head from 'next/head';
+import Faq from '@/components/Faq';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import { createClient } from '@/utils/supabase/server';
 
@@ -39,6 +40,12 @@ export default async function MobilePlans() {
   }
 
   return (
+    <>
+        <Head>
+        <title>Forfait Mobile - ComparePrix</title>
+        <meta name="description" content="Découvrez les meilleurs forfaits mobiles et comparez les offres des opérateurs télécoms pour trouver le forfait qui vous convient le mieux." />
+        <link rel="canonical" href="https://www.compareprix.net/forfait-mobile" />
+      </Head>
     <div className="max-w-7xl mx-auto p-4">
       <div className="text-center mb-8">
         <a
@@ -99,6 +106,10 @@ export default async function MobilePlans() {
         ))}
       </div>
       <NewsletterSignup title={''} description={''} />
+      <Faq />
+      
     </div>
+    </>
+    
   );
 }

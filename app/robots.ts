@@ -4,13 +4,18 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: '*',
+        userAgent: '*', 
         allow: '/',
         disallow: [
-          '/go',
+          '/go', 
         ],
+      },
+      {
+        userAgent: 'BadBot', 
+        disallow: '/', 
       },
     ],
     sitemap: 'https://compareprix.net/sitemap.xml',
+    host: 'https://compareprix.net',
   };
 }

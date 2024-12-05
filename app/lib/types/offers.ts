@@ -7,6 +7,7 @@ export interface Root {
     offres: Offre[]
   }
   
+  
   export interface Filtres {
     reseaux: any
     services: Services
@@ -145,6 +146,8 @@ export interface Root {
   }
   
   export interface Operateur2 {
+    slug: string
+    reseaux: any
     id: number
     nom: string
     url: string

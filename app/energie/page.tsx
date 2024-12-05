@@ -1,21 +1,19 @@
-import React from 'react'
-import HeroSection from '@/components/Banner'
-import type { Metadata } from 'next'
-import Banner from '@/components/Banner'
+// energie/page.tsx
+import React from 'react';
 
-// Exportation de l'objet Metadata
-export const metadata: Metadata = {
-  title: "Comparateur d'offres énergie - Trouvez les meilleurs tarifs gaz et électricité",
-  description: "Comparez les offres d'énergie pour trouver les meilleurs tarifs de gaz et d'électricité en France. Utilisez notre outil pour économiser sur vos factures.",
-}
-
-const Page = () => {
+const LandingPage: React.FC = () => {
   return (
-    <div>
-      <Banner title={''} description={''} />
-     
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+      <iframe
+        src="https://services.bemove.fr/ouverture-compteurs-energie-compareprix"
+        width="100%"
+        height="800px"
+        frameBorder="0"
+        className="rounded-lg shadow-lg"
+        title="Landing Page"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default LandingPage;

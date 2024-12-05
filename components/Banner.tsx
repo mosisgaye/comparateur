@@ -24,19 +24,17 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
     <div className="flex flex-col md:flex-row items-center bg-blue-700 text-white py-16 px-8 md:px-20">
       {/* Left Side: Text Content */}
       <div className="flex-1 mb-8 md:mb-0 md:pr-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Trouvez les meilleures offres de <span className="text-yellow-300">mobile et box internet</span>.
-        </h2>
+        <h1 className="text-3xl md:text-4xl font-bold mb-6">
+          Meilleures offres<span className="text-yellow-300"> Télécoms et Energie en France</span>
+        </h1>
         <ul className="space-y-3 mb-8 text-lg">
           <li className="flex items-start">
-            <span className="text-green-400 mr-2">✔</span> Service 100% gratuit et en ligne
+            <span className="text-green-400 mr-2">✔</span> Service 100% gratuit
           </li>
           <li className="flex items-start">
-            <span className="text-green-400 mr-2">✔</span> Économisez jusqu’à 100€/mois
+            <span className="text-green-400 mr-2">✔</span> Jusqu’à 200€ d'économie
           </li>
-          <li className="flex items-start">
-            <span className="text-green-400 mr-2">✔</span> Comparez les box internet et forfait mobile
-          </li>
+         
         </ul>
         <button className="bg-gradient-to-r from-purple-700 to-purple-500 px-6 py-3 text-lg rounded-full shadow-lg hover:from-purple-500 hover:to-purple-700 transition-all duration-300">
           Comparer les forfaits

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import Article from "@/components/Article";
 import Banner from "@/components/Banner";
 import Carousel from "@/components/Carousel";
@@ -18,23 +18,13 @@ export default function Index() {
   return (
     <>
       <Head>
-      
         <link rel="canonical" href="https://compareprix.net" />
       </Head>
       <main className="flex-1 flex flex-col gap-6 px-4">
-       
         <section aria-labelledby="banner">
           <Banner
             title={bannerContent.title}
             description={bannerContent.description}
-          />
-        </section>
-
-        {/* Section Carrousel */}
-        <section aria-labelledby="carousel">
-          <Carousel
-            title={carouselContent.title}
-            description={carouselContent.description}
           />
         </section>
 
@@ -61,7 +51,13 @@ export default function Index() {
             description={articleContent.description}
           />
         </section>
-
+        {/* Section Carrousel */}
+        <section aria-labelledby="carousel">
+          <Carousel
+            title={carouselContent.title}
+            description={carouselContent.description}
+          />
+        </section>
         {/* Section Newsletter */}
         <section aria-labelledby="newsletter" className="py-10">
           <NewsletterSignup

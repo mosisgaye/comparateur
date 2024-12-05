@@ -26,9 +26,9 @@ export default function Header() {
 
       {/* Navigation Links for desktop */}
       <nav className="hidden xl:flex space-x-8 lg:space-x-12 px-20 flex-grow items-center justify-center">
-        <Link href="/box-internet/" className="mx-2 text-lg font-semibold hover:text-gray-400">Box Internet</Link>
-        <Link href="/forfait-mobile/" className="mx-2 text-lg font-semibold hover:text-gray-400">Forfait mobile</Link>
-        <Link href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Énergie</Link>
+        <Link href="/forfaits/" className="mx-2 text-lg font-semibold hover:text-gray-400">Forfait mobile</Link>
+        <Link href="/box/" className="mx-2 text-lg font-semibold hover:text-gray-400">Box Internet</Link>
+        <Link href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Energie</Link>
         <Link href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blog</Link>
       </nav>
 
@@ -36,10 +36,10 @@ export default function Header() {
         {/* Button to open the popup */}
         <button
           onClick={openPopup}
-          className="hidden md:block bg-[#4A8F3E] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
+          className="hidden font-bold md:block bg-[#4A8F3E] text-white rounded-full px-4 py-2 mr-2 text-sm hover:bg-[#79CE25]"
           aria-label="Parler à un expert"
         >
-          Parlez à un expert
+          01 89 70 90 44
         </button>
 
         {/* Hamburger Menu for mobile */}
@@ -100,9 +100,9 @@ export default function Header() {
           </div>
 
           <nav className="mt-10 space-y-4 text-center">
-            <Link href="/box-internet/" className="block text-lg font-semibold">Box internet</Link>
             <Link href="/forfait-mobile/" className="block text-lg font-semibold">Forfait mobile</Link>
-            <Link href="/energie/" className="block text-lg font-semibold">Énergie</Link>
+            <Link href="/box/" className="block text-lg font-semibold">Box internet</Link>
+            <Link href="/energie/" className="block text-lg font-semibold">Energie</Link>
             <Link href="/articles/" className="block text-lg font-semibold">Blog</Link>
           </nav>
         </div>

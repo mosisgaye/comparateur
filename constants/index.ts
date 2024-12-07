@@ -39,3 +39,6 @@ export const newsletterSignupContent: Content = {
   title: "Inscrivez-vous à notre Newsletter",
   description: "Recevez les dernières offres et conseils sur les téléphones et box internet. Restez informé des dernières actualités et guides d'achat."
 };
+
+
+

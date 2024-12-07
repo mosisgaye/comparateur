@@ -1,4 +1,5 @@
 export interface Root {
+    offres: never[]
     commercial: Commercial
   }
   

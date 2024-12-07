@@ -13,6 +13,7 @@ import {
   articleContent,
   newsletterSignupContent,
 } from "@/constants/index";
+import HomePage from "./blog/page";
 
 export default function Index() {
   return (
@@ -40,17 +41,11 @@ export default function Index() {
         <section aria-labelledby="rating">
           <Rating
             title={ratingContent.title}
-            description={ratingContent.description}
-          />
+            description={ratingContent.description} />
         </section>
 
-        {/* Section Articles */}
-        <section aria-labelledby="articles">
-          <Article
-            title={articleContent.title}
-            description={articleContent.description}
-          />
-        </section>
+        {/* Section Blog */}  
+        <HomePage />
         {/* Section Carrousel */}
         <section aria-labelledby="carousel">
           <Carousel

@@ -31,7 +31,7 @@ export default async function Home() {
           design, and development.
         </p>
       </div>
-      <BlogList posts={posts} />
+      
     </main>
   );
 }

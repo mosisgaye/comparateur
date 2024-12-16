@@ -1,10 +1,12 @@
 import { createClient } from 'contentful';
 
 const client = createClient({
-  space: 'uwj2nz7k72gm',
-  accessToken: '6S9881x_GMSedikiJYQJu58JPx9YZGo3i-c2zrJR-I8',
-  environment: 'master'
+  space: process.env.CONTENTFUL_SPACE_ID as string,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+  environment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
 });
+
+export default client;
 
 export const getBlogPosts = async () => {
   try {

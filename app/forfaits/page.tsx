@@ -6,6 +6,7 @@ import { OfferFilters } from '@/components/offers/OfferFilters';
 import type { Commercial, Offre, Filtres } from '@/app/lib/types/offers';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import Banner from '@/components/Banner';
 
 export default function ForfaitsPage() {
   const [data, setData] = useState<Commercial | null>(null);
@@ -15,7 +16,7 @@ export default function ForfaitsPage() {
   const [filters, setFilters] = useState<Filtres | null>(null);
   const [filteredOffers, setFilteredOffers] = useState<Offre[]>([]);
   const [displayedOffers, setDisplayedOffers] = useState<Offre[]>([]);
-  const [offerLimit, setOfferLimit] = useState(9);
+  const [offerLimit, setOfferLimit] = useState(12);
 
   useEffect(() => {
     async function loadOffers() {
@@ -89,6 +90,8 @@ export default function ForfaitsPage() {
   }
 
   return (
+    <div>
+      <Banner title={''} description={''} />
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Forfaits Mobiles</h1>
@@ -117,6 +120,7 @@ export default function ForfaitsPage() {
             </div>
         )}
       </div>
+    </div>
     </div>
   );
 }

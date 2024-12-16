@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogCard from './BlogCard';
 import ErrorMessage from '@/components/ui/ErrorMessage';
-import { ERROR_MESSAGES } from '@/app/lib/types';
+import { ERROR_MESSAGES, } from '@/app/lib/types';
 
 // Importer ou définir le type Post utilisé par BlogCard
 interface FeaturedImage {

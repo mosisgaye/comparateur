@@ -101,7 +101,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           href={`/blog/post/${slug}`}
           className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium group"
         >
-          Read More 
+          Lire Plus 
           <svg 
             className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" 
             fill="none" 

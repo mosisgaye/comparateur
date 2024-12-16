@@ -15,3 +15,21 @@ export const CONTENT_TYPES = {
     SUCCESS: 'success',
     ERROR: 'error'
   };
+
+
+
+  export type Post = {
+    title: string;
+    shortDescription?: string;
+    slug: string;
+    featuredImage?: {
+      url: string;
+      description?: string;
+    };
+    publishedDate?: string;
+    author?: {
+      name: string;
+      avatar?: string;
+    };
+  };
+  

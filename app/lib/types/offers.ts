@@ -118,6 +118,9 @@ export interface Root {
   }
   
   export interface Offre {
+    plusDe100Go: unknown
+    sansEngagement: unknown
+    compatible5G: unknown
     id: number
     nom: string
     url: string

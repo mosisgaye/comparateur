@@ -21,8 +21,8 @@ export const carouselContent: Content = {
 };
 
 export const featureSectionContent: Content = {
-  title: "Trouvez la Box Internet Idéale : Fibre, Petits Prix et Sans Engagement",
-  description: "Découvrez les téléphones les mieux notés par nos utilisateurs. Inclut des évaluations pour les derniers modèles et les meilleures ventes."
+  title: "Fibre et Économies : ComparePrix.net Vous Guide Vers la Box Internet Idéale",
+  description: "Comparez les meilleurs forfaits mobiles et box internet pour trouver l'offre qui vous convient."
 };
 
 export const ratingContent: Content = {

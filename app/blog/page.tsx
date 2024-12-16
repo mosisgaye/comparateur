@@ -1,6 +1,5 @@
 import { getBlogPosts } from '@/app/lib/contentful';
-import BlogList  from '@/components/blog/BlogList';
-
+import BlogList from '@/components/blog/BlogList';
 
 export default async function Home() {
   const { items: posts, error } = await getBlogPosts();
@@ -9,6 +8,14 @@ export default async function Home() {
     return (
       <div className="flex h-[50vh] items-center justify-center">
         <p className="text-destructive">{error}</p>
+      </div>
+    );
+  }
+
+  if (!posts || posts.length === 0) {
+    return (
+      <div className="flex h-[50vh] items-center justify-center">
+        <p className="text-muted-foreground">No posts found.</p>
       </div>
     );
   }

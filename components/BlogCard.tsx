@@ -2,11 +2,11 @@ import React from 'react';
 import { format } from 'date-fns';
 import Link from 'next/link';
 
-// Define the type for the 'post' prop
+
 interface Post {
   fields: {
     title: string;
-    excerpt?: string; // Optional property
+    excerpt?: string; 
     slug: string;
     featuredImage?: {
       fields: {
@@ -15,7 +15,7 @@ interface Post {
         };
       };
     };
-    publishDate?: string; // Optional property
+    publishDate?: string; 
   };
 }
 

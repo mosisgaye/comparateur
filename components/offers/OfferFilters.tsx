@@ -23,6 +23,18 @@ export function OfferFilters({ filters, onFilterChange }: OfferFiltersProps) {
             ))}
           </select>
         </div>
+        <div className="relative">
+          <select
+            className="px-4 py-3 bg-white text-blue-700 border border-gray-300 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onChange={(e) => onFilterChange('additionalFilters', e.target.value)}
+          >
+            <option value="">Opérateurs</option>
+            <option value="sansEngagement">Orange</option>
+            <option value="plusDe100Go">Bouygues Telecom</option>
+            <option value="compatible5G">SFR</option>
+            <option value="compatible5G">Free</option>
+          </select>
+        </div>
 
         {/* Tri */}
         <div className="relative">

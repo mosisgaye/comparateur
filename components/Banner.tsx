@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {cardData} from "@/constants/index";
+import { Bird, ChartColumnStacked, PiggyBank, ShieldCheck } from "lucide-react";
 
 interface BannerProps {
   title: string;
@@ -21,23 +22,33 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row items-center bg-blue-700 text-white py-16 px-8 md:px-20">
-      {/* Left Side: Text Content */}
+    <div className="flex flex-col md:flex-row items-center bg-gradient-to-r from-[#151d53] via-[#1b28b5] to-[#3244ec] text-white py-16 px-8 md:px-20">
+     
       <div className="flex-1 mb-8 md:mb-0 md:pr-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">
-          Meilleures offres<span className="text-yellow-300"> Télécoms et Energie en France</span>
+        Pourquoi Opter <span className="text-[#8cd147]">ComparePrix.net ?</span>
         </h1>
         <ul className="space-y-3 mb-8 text-lg">
+        
           <li className="flex items-start">
-            <span className="text-green-400 mr-2">✔</span> Service 100% gratuit
+            <span className="text-[#8cd147] mr-2"><ShieldCheck /></span> Qualité et fiabilité
           </li>
           <li className="flex items-start">
-            <span className="text-green-400 mr-2">✔</span> Jusqu’à 200€ d'économie
+            <span className="text-[#8cd147] mr-2"><Bird /></span> Service 100% gratuit
+          </li>
+       
+          <li className="flex items-start">
+            <span className="text-[#8cd147] mr-2"><PiggyBank /></span> Jusqu’à 200€ d'économies
+          </li>
+
+
+          <li className="flex items-start">
+            <span className="text-[#8cd147] mr-2"><ChartColumnStacked /></span> Comparaison Facile et Rapide
           </li>
          
         </ul>
-        <button className="bg-gradient-to-r from-purple-700 to-purple-500 px-6 py-3 text-lg rounded-full shadow-lg hover:from-purple-500 hover:to-purple-700 transition-all duration-300">
-          Comparer les forfaits
+        <button className="aicha bg-[#8cd147] px-6 py-3 text-lg rounded-full shadow-2xl transition-all duration-300">
+          Prêt à démarrer
         </button>
       </div>
 

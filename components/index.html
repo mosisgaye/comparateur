@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ce que disent nos clients</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .infinite-scroll {
+      animation: slide 25s linear infinite;
+      display: flex;
+      gap: 1rem;
+      width: 200%;
+    }
+
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-white text-white">
+
+  <section class="max-w-6xl mx-auto p-6 shadow-lg rounded-lg bg-white">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h2 class="text-4xl font-bold text-orange-500">Wat onze klanten zeggen</h2>
+      <p class="text-lg mt-4 text-gray-600">
+        Uw <a href="#" class="text-orange-500 underline">klantbeoordelingen</a> stellen ons in staat om elke dag te verbeteren, zodat we als leverancier van groene energie altijd hernieuwbare energieaanbiedingen kunnen doen die beter aansluiten bij uw verwachtingen en budget.
+      </p>
+    </div>
+
+    <!-- Rating Summary -->
+    <div class="flex flex-col items-center mb-8">
+      <div class="text-yellow-400 text-3xl">★★★★★</div>
+      <p class="text-lg mt-2 text-gray-500">5 sterren gebaseerd op 41 beoordelingen</p>
+    </div>
+
+    <!-- Reviews Slider -->
+    <div class="relative overflow-hidden">
+      <div class="infinite-scroll">
+        <!-- Duplicate Review Cards for Smooth Infinite Scroll -->
+        <div class="flex">
+          <!-- Original Cards -->
+          <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+            <div class="w-16 h-16 bg-blue-600 flex items-center justify-center text-2xl font-bold rounded-full text-white">M</div>
+            <h3 class="mt-4 text-xl font-semibold text-center">Ab Barkane</h3>
+            <p class="text-sm text-gray-400">4 dagen geleden</p>
+            <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+            <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Snel en efficiënt, ik beveel het ten zeerste aan!</p>
+          </div>
+
+          <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+            <div class="w-16 h-16 bg-orange-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">E</div>
+            <h3 class="mt-4 text-xl font-semibold text-center">EKM Motors</h3>
+            <p class="text-sm text-gray-400">2 dagen geleden</p>
+            <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+            <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Bedankt Noemie voor deze precieze en vriendelijke e-mail die de relaties met uw klanten menselijk maakt.</p>
+          </div>
+
+          <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+            <div class="w-16 h-16 bg-teal-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">H</div>
+            <h3 class="mt-4 text-xl font-semibold text-center">El Yaghmouri Ahmed</h3>
+            <p class="text-sm text-gray-400">2 dagen geleden</p>
+            <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+            <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Altijd een geweldige ervaring! Zowel de diensten als de kwaliteit van de communicatie zijn uitstekend.</p>
+          </div>
+
+          <!-- Duplicate Cards -->
+          <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+            <div class="w-16 h-16 bg-blue-600 flex items-center justify-center text-2xl font-bold rounded-full text-white">M</div>
+            <h3 class="mt-4 text-xl font-semibold text-center">Ab Barkane</h3>
+            <p class="text-sm text-gray-400">4 dagen geleden</p>
+            <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+            <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Snel en efficiënt, ik beveel het ten zeerste aan!</p>
+          </div>
+
+          <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+            <div class="w-16 h-16 bg-orange-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">E</div>
+            <h3 class="mt-4 text-xl font-semibold text-center">EKM Motors</h3>
+            <p class="text-sm text-gray-400">2 dagen geleden</p>
+            <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+            <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Bedankt Noemie voor deze precieze en vriendelijke e-mail die de relaties met uw klanten menselijk maakt.</p>
+          </div>
+
+          <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+            <div class="w-16 h-16 bg-teal-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">H</div>
+            <h3 class="mt-4 text-xl font-semibold text-center">El Yaghmouri Ahmed</h3>
+            <p class="text-sm text-gray-400">2 dagen geleden</p>
+            <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+            <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Altijd een geweldige ervaring! Zowel de diensten als de kwaliteit van de communicatie zijn uitstekend.</p>
+          </div>
+        </div>
+        <div class="flex">
+            <!-- Original Cards -->
+            <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+              <div class="w-16 h-16 bg-blue-600 flex items-center justify-center text-2xl font-bold rounded-full text-white">M</div>
+              <h3 class="mt-4 text-xl font-semibold text-center">Ab Barkane</h3>
+              <p class="text-sm text-gray-400">4 dagen geleden</p>
+              <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+              <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Snel en efficiënt, ik beveel het ten zeerste aan!</p>
+            </div>
+  
+            <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+              <div class="w-16 h-16 bg-orange-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">E</div>
+              <h3 class="mt-4 text-xl font-semibold text-center">EKM Motors</h3>
+              <p class="text-sm text-gray-400">2 dagen geleden</p>
+              <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+              <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Bedankt Noemie voor deze precieze en vriendelijke e-mail die de relaties met uw klanten menselijk maakt.</p>
+            </div>
+  
+            <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+              <div class="w-16 h-16 bg-teal-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">H</div>
+              <h3 class="mt-4 text-xl font-semibold text-center">El Yaghmouri Ahmed</h3>
+              <p class="text-sm text-gray-400">2 dagen geleden</p>
+              <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+              <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Altijd een geweldige ervaring! Zowel de diensten als de kwaliteit van de communicatie zijn uitstekend.</p>
+            </div>
+  
+            <!-- Duplicate Cards -->
+            <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+              <div class="w-16 h-16 bg-blue-600 flex items-center justify-center text-2xl font-bold rounded-full text-white">M</div>
+              <h3 class="mt-4 text-xl font-semibold text-center">Ab Barkane</h3>
+              <p class="text-sm text-gray-400">4 dagen geleden</p>
+              <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+              <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Snel en efficiënt, ik beveel het ten zeerste aan!</p>
+            </div>
+  
+            <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+              <div class="w-16 h-16 bg-orange-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">E</div>
+              <h3 class="mt-4 text-xl font-semibold text-center">EKM Motors</h3>
+              <p class="text-sm text-gray-400">2 dagen geleden</p>
+              <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+              <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Bedankt Noemie voor deze precieze en vriendelijke e-mail die de relaties met uw klanten menselijk maakt.</p>
+            </div>
+  
+            <div class="card flex-shrink-0 w-64 min-h-[20rem] bg-white text-gray-800 p-6 rounded-lg shadow-md">
+              <div class="w-16 h-16 bg-teal-500 flex items-center justify-center text-2xl font-bold rounded-full text-white">H</div>
+              <h3 class="mt-4 text-xl font-semibold text-center">El Yaghmouri Ahmed</h3>
+              <p class="text-sm text-gray-400">2 dagen geleden</p>
+              <div class="text-yellow-400 text-lg mt-2">★★★★★</div>
+              <p class="mt-4 text-center overflow-y-auto break-words max-h-24">Altijd een geweldige ervaring! Zowel de diensten als de kwaliteit van de communicatie zijn uitstekend.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

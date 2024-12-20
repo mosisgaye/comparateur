@@ -12,6 +12,7 @@ export const getBlogPosts = async () => {
   try {
     const response = await client.getEntries({
       content_type: 'pageBlogPost',
+      order: '-fields.publishedDate',
       include: 2
     });
 

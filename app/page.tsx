@@ -13,8 +13,6 @@ import {
   articleContent,
   newsletterSignupContent,
 } from "@/constants/index";
-import HomePage from "./blog/page";
-import Heroblog from "@/components/Heroblog";
 
 export default function Index() {
   return (
@@ -23,15 +21,12 @@ export default function Index() {
         <link rel="canonical" href="https://compareprix.net" />
       </Head>
       <main className="flex-1 flex flex-col gap-6 px-4">
-     
         <section aria-labelledby="banner">
           <Banner
             title={bannerContent.title}
             description={bannerContent.description}
           />
         </section>
-
-        
 
         {/* Section Fonctionnalités */}
         <section aria-labelledby="features">
@@ -45,11 +40,17 @@ export default function Index() {
         <section aria-labelledby="rating">
           <Rating
             title={ratingContent.title}
-            description={ratingContent.description} />
+            description={ratingContent.description}
+          />
         </section>
 
-        {/* Section Blog */}  
-        <HomePage />
+        {/* Section Articles */}
+        <section aria-labelledby="articles">
+          <Article
+            title={articleContent.title}
+            description={articleContent.description}
+          />
+        </section>
         {/* Section Carrousel */}
         <section aria-labelledby="carousel">
           <Carousel

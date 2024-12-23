@@ -37,7 +37,7 @@ export default function Header() {
         <Link href="/forfaits/" className="mx-2 text-lg font-semibold hover:text-gray-400">Forfait mobile</Link>
         <Link href="/box/" className="mx-2 text-lg font-semibold hover:text-gray-400">Box Internet</Link>
         <Link href="/energie/" className="mx-2 text-lg font-semibold hover:text-gray-400">Energie</Link>
-        <Link href="/blog/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blog</Link>
+        <Link href="/articles/" className="mx-2 text-lg font-semibold hover:text-gray-400">Blog</Link>
       </nav>
 
       <nav className="flex items-center">
@@ -113,7 +113,7 @@ export default function Header() {
             <Link href="/forfaits/" className="block text-lg font-semibold">Forfait mobile</Link>
             <Link href="/box/" className="block text-lg font-semibold">Box internet</Link>
             <Link href="/energie/" className="block text-lg font-semibold">Energie</Link>
-            <Link href="/blog/" className="block text-lg font-semibold">Blog</Link>
+            <Link href="/articles/" className="block text-lg font-semibold">Blog</Link>
           </nav>
         </div>
       </div>

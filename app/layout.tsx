@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import Script from "next/script";
 
+
 const Header = dynamic(() => import("@/components/Header"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
 
@@ -56,6 +57,8 @@ export const metadata = {
   },
 };
 
+
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
@@ -63,11 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="canonical" href="https://compareprix.net" />
       </Head>
 
+      {/* Script existant */}
       <Script
         src="https://www.googletagmanager.com/gtm.js?id=GTM-P4RJN9DT"
         strategy="lazyOnload"
       />
-
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-PJ9RE52R47"
         strategy="lazyOnload"
@@ -81,6 +84,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}
       </Script>
 
+      {/* Nouveau script pour Leads.ai */}
+      <Script
+        id="leads-ai-script"
+        src="https://r2.leadsy.ai/tag.js"
+        data-pid="n2FlKxF5STNWJsra"
+        data-version="062024"
+        strategy="lazyOnload"
+      ></Script>
+
       <body className="bg-gray-50">
         <Header />
         <main>{children}</main>
@@ -90,3 +102,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

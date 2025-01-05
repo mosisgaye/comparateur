@@ -8,6 +8,9 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+body {
+  @apply bg-gray-100 text-gray-900;
+}
 
 .providers-carousel {
   background-color: #fafbfc;

@@ -1,18 +1,19 @@
-import Head from "next/head";
-import Article from "@/components/Article";
-import Banner from "@/components/Banner";
-import Carousel from "@/components/Carousel";
-import FeatureSection from "@/components/FeatureSection";
-import NewsletterSignup from "@/components/NewsletterSignup";
-import Rating from "@/components/Rating";
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Banner from '@/components/Banner';
+import FeatureSection from '@/components/FeatureSection';
+import NewsletterSignup from '@/components/NewsletterSignup';
+import Rating from '@/components/Rating';
+import Page from '@/app/blog/page'; // Assurez-vous que ce chemin est correct
+
 import {
   bannerContent,
   carouselContent,
   featureSectionContent,
   ratingContent,
-  articleContent,
   newsletterSignupContent,
-} from "@/constants/index";
+} from '@/constants/index';
+import AdBanner from '@/components/AdBanner';
 
 export default function Index() {
   return (
@@ -21,6 +22,7 @@ export default function Index() {
         <link rel="canonical" href="https://compareprix.net" />
       </Head>
       <main className="flex-1 flex flex-col gap-6 px-4">
+        {/* Section Bannière */}
         <section aria-labelledby="banner">
           <Banner
             title={bannerContent.title}
@@ -44,20 +46,16 @@ export default function Index() {
           />
         </section>
 
-        {/* Section Articles */}
-        <section aria-labelledby="articles">
-          <Article
-            title={articleContent.title}
-            description={articleContent.description}
-          />
+        {/* Section Blog */}
+        <section aria-labelledby="blog" className="py-10">
+          <Page /> {/* Votre composant blog */}
         </section>
-        {/* Section Carrousel */}
-        <section aria-labelledby="carousel">
-          <Carousel
-            title={carouselContent.title}
-            description={carouselContent.description}
-          />
-        </section>
+
+     
+        
+          <AdBanner />
+    
+
         {/* Section Newsletter */}
         <section aria-labelledby="newsletter" className="py-10">
           <NewsletterSignup

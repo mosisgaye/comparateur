@@ -1,9 +1,9 @@
 export default function Heroblog() {
     return (
-        <section className="relative overflow-hidden bg-white">
+        <section className="relative overflow-hidden bg-blue-700 ">
             <div className="wrapper hero-content-simple px-4 py-8 mx-auto max-w-screen-lg text-center">
-                <h2 className="text-black text-3xl font-bold">Pourquoi Choisir ComparePrix.net ?</h2>
-                <p className="hero-desc text-black mt-4 text-lg">
+                <h2 className="text-white text-3xl font-bold">Pourquoi Choisir ComparePrix.net ?</h2>
+                <p className="hero-desc mt-4 text-lg text-white">
                
             Notre outil de comparaison vous offre la possibilité de voir
             immédiatement les différentes offres des principaux fournisseurs.

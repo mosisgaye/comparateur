@@ -7,6 +7,7 @@ import type { Commercial, Offre, Filtres } from '@/app/lib/types/offers';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import Banner from '@/components/Banner';
+import Heroblog from '@/components/Heroblog';
 
 export default function ForfaitsPage() {
   const [data, setData] = useState<Commercial | null>(null);
@@ -91,7 +92,7 @@ export default function ForfaitsPage() {
 
   return (
     <div>
-      <Banner title={''} description={''} />
+      <Heroblog />
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Forfaits Mobiles</h1>

@@ -33,7 +33,7 @@ const Rating: React.FC<BannerProps> = ({ title, description }) => {
             <div className="text-2xl font-semibold text-gray-800 mt-2">{card.price} / mois</div>
             <div className="text-md text-gray-600 mt-4 text-center">{card.details}</div>
             <button className="mt-4 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">
-              Voir Offre
+              <a href='https://www.awin1.com/awclick.php?gid=474635&mid=66178&awinaffid=1749047&linkid=3485789&clickref' target='_blank'>Voir Offre</a>
             </button>
           </motion.div>
         ))}

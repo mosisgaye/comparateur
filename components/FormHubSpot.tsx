@@ -1,42 +1,55 @@
-'use client'
+'use client';
 
 import React, { useEffect } from 'react';
 
 const FormHubSpot: React.FC = () => {
   useEffect(() => {
-    if (!document.querySelector(`script[src="//js-eu1.hsforms.net/forms/embed/v2.js"]`)) {
+    const scriptUrl = '//js-eu1.hsforms.net/forms/embed/v2.js';
+
+    // Check if the script is already present
+    if (!document.querySelector(`script[src="${scriptUrl}"]`)) {
       const script = document.createElement('script');
       script.charset = 'utf-8';
       script.type = 'text/javascript';
-      script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+      script.src = scriptUrl;
 
       script.onload = () => {
-        (window as any).hbspt.forms.create({
-          region: 'eu1',
-          portalId: '144900260',
-          formId: '8dcbb52a-6416-4217-a309-a1f759a1047e',
-          target: '#hubspot-form'
-        });
+        if ((window as any).hbspt) {
+          (window as any).hbspt.forms.create({
+            region: 'eu1',
+            portalId: '48060727',
+            formId: 'd074bf59-9100-4473-bd8d-11ea1774ab19',
+            target: '#hubspot-form',
+          });
+        }
       };
 
       document.body.appendChild(script);
 
-      // Clean up script on component unmount
+      // Cleanup script on component unmount
       return () => {
-        document.body.removeChild(script);
+        if (script.parentNode) {
+          document.body.removeChild(script);
+        }
       };
     } else {
-      (window as any).hbspt.forms.create({
-        region: 'eu1',
-        portalId: '144900260',
-        formId: '8dcbb52a-6416-4217-a309-a1f759a1047e',
-        target: '#hubspot-form'
-      });
+      // If script already exists, directly create the form
+      if ((window as any).hbspt) {
+        (window as any).hbspt.forms.create({
+          region: 'eu1',
+          portalId: '48060727',
+          formId: 'd074bf59-9100-4473-bd8d-11ea1774ab19',
+          target: '#hubspot-form',
+        });
+      }
     }
   }, []);
 
   return (
-    <div id="hubspot-form" className="p-6 border-2 border-[#79CE25] bg-white rounded-lg shadow-md w-full max-w-md"></div>
+    <div
+      id="hubspot-form"
+      className="p-6 border-2 border-[#79CE25] bg-white rounded-lg shadow-md w-full max-w-md"
+    ></div>
   );
 };
 

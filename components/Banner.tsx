@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {cardData} from "@/constants/index";
 import { Bird, ChartColumnStacked, PiggyBank, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 interface BannerProps {
   title: string;
@@ -26,7 +27,7 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
      
       <div className="flex-1 mb-8 md:mb-0 md:pr-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">
-        Pourquoi Opter <span className="text-[#8cd147]">ComparePrix.net ?</span>
+         Opter <span className="text-[#8cd147]">ComparePrix.net </span>
         </h1>
         <ul className="space-y-3 mb-8 text-lg">
         
@@ -47,9 +48,11 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
           </li>
          
         </ul>
-        <button className="aicha bg-[#8cd147] px-6 py-3 text-lg rounded-full shadow-2xl transition-all duration-300">
-          Prêt à démarrer
-        </button>
+        <Link href="/partner" passHref>
+  <button className="aicha bg-[#8cd147] px-6 py-3 text-lg rounded-full shadow-2xl transition-all duration-300">
+    Prêt à économiser ?
+  </button>
+</Link>
       </div>
 
       <div className="flex-1 flex justify-center">

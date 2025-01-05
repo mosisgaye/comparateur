@@ -26,8 +26,8 @@ export const featureSectionContent: Content = {
 };
 
 export const ratingContent: Content = {
-  title: "Comparez les Meilleurs Forfaits Mobiles",
-  description: "Partagez votre avis sur les téléphones que vous avez testés. Aidez d'autres consommateurs à faire des choix éclairés."
+  title: "Forfait mobile : comparez les meilleures offres fin 2025",
+  description: "Avec de nombreux forfaits disponibles, il est difficile de choisir. Utilisez notre comparateur pour filtrer par opérateur, services et prix, ou découvrez notre sélection des meilleurs forfaits"
 };
 
 export const articleContent: Content = {

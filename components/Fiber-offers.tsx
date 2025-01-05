@@ -131,7 +131,7 @@ export default function FiberOffers() {
             ))}
           </div>
 
-          <Button className="w-full mt-8 bg-orange-500 hover:bg-[#002B56] text-slate-50 text-xl">
+          <Button className="w-full mt-8 bg-gradient-to-r from-[#ff9800] to-[#ff5722] rounded-3xl text-slate-50 text-xl">
             {"Voir les détails de l'offre"}
           </Button>
         </CardContent>

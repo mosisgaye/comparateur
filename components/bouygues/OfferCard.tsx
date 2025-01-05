@@ -48,7 +48,7 @@ const OfferCard: React.FC<OfferCardProps> = ({ offer }) => {
           href={offer.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full bg-orange-500 text-white text-center py-4 rounded-xl font-semibold hover:bg-orange-600 transition-colors duration-300"
+          className="block w-full bg-gradient-to-r from-[#ff9800] to-[#ff5722] text-white text-center py-4 rounded-3xl font-semibold hover:bg-orange-600 transition-colors duration-300"
         >
           Je choisis cette offre
         </a>

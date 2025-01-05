@@ -37,10 +37,10 @@ const plans = [
 
 export default function SansEngagement() {
   return (
-    <div className="bg-gradient-to-r from-[#f3f4f6] to-[#e3f2fd]">
-      <div className=" mx-auto space-y-8">
+    <div className="bg-gradient-to-r from-[#f3f4f6] to-[#e3f2fd] py-8 px-4 sm:px-8">
+      <div className="max-w-7xl mx-auto space-y-8">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl font-extrabold text-[#1a237e]">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1a237e]">
             Nos forfaits mobiles sans engagement
           </h1>
           <Badge className="bg-[#ffecb3] text-[#ff9800] border-none px-4 py-2 rounded-full text-sm font-medium">
@@ -48,28 +48,33 @@ export default function SansEngagement() {
           </Badge>
         </div>
 
-        <div className="flex justify-between gap-6">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan, index) => (
-            <Card key={index} className="flex-1 relative overflow-hidden rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 bg-white border border-gray-200">
+            <Card
+              key={index}
+              className="relative overflow-hidden rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 bg-white border border-gray-200 sm:max-w-xs mx-auto"
+            >
               {plan.isPopular && (
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-[#ffa000] to-[#ff5722] text-white px-4 py-1 text-sm font-medium rounded-bl-2xl">
                   Populaire
                 </div>
               )}
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 sm:p-8 space-y-6">
                 <div className="space-y-2">
                   <div className="flex justify-between items-start">
                     <div>
-                      <div className="text-4xl font-bold text-[#1a237e]">
+                      <div className="text-3xl sm:text-4xl font-bold text-[#1a237e]">
                         {plan.price.toFixed(2)}€
-                        <span className="text-lg font-normal text-gray-500">/mois</span>
+                        <span className="text-lg font-normal text-gray-500">
+                          /mois
+                        </span>
                       </div>
                       <div className="text-sm text-gray-500">Sans engagement</div>
                     </div>
-                    <Badge 
+                    <Badge
                       className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                        plan.network === '5G' 
-                          ? 'bg-[#c8e6c9] text-[#2e7d32]' 
+                        plan.network === '5G'
+                          ? 'bg-[#c8e6c9] text-[#2e7d32]'
                           : 'bg-[#bbdefb] text-[#1e88e5]'
                       }`}
                     >
@@ -102,20 +107,17 @@ export default function SansEngagement() {
                   </div>
                 </div>
 
-            
-                  <a href={plan.url} target="_blank">
-                    <Button 
-                      className="w-full bg-gradient-to-r from-[#ff9800] to-[#ff5722] hover:opacity-90 text-white font-medium py-3 rounded-full text-lg"
-                    >
-                      Choisir ce forfait
-                    </Button>
-                  </a>
-           
+                <a href={plan.url} target="_blank">
+                  <Button className="w-full bg-gradient-to-r from-[#ff9800] to-[#ff5722] hover:opacity-90 text-white font-medium py-3 rounded-full text-lg">
+                    Choisir ce forfait
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
+

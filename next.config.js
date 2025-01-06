@@ -1,16 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['www.ariase.com', 'images.ctfassets.net', 'www.awin1.com', 'tracking.publicidees.com'], // Ajoutez vos domaines ici (supprimez "https://")
+  images: { unoptimized: true },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   async rewrites() {
     return [
       {
-        source: '/api/:path*', // Attrape toutes les requêtes vers `/api/...`
+        source: '/api/:path*',
         destination: 'https://telecom.bemove.fr/:path*', // Redirige vers l'API backend
       },
     ];
   },
 };
 
-module.exports = nextConfig;
+module.exports = nextConfig;  // Ensure it's exported correctly

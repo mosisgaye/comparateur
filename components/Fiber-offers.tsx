@@ -74,7 +74,7 @@ export default function FiberOffers() {
   const [selectedOffer, setSelectedOffer] = useState<keyof typeof offers>('pure-fiber');
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
+    <div className="max-w-3xl mx-auto p-6 bg-gradient-to-r from-[#f3f4f6] to-[#e3f2fd]">
       <h1 className="text-3xl font-bold text-center mb-8 text-[#003B73]">
         {"Nos offres fibre sans engagement"}
       </h1>

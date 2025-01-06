@@ -1,8 +1,6 @@
 import { BlogPost } from '@/app/lib/types/contentful';
-
-export function getAuthorInitial(author: BlogPost['fields']['author']): string {
-  return author?.name ? author.name.charAt(0) : '?';
-}
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Document } from '@contentful/rich-text-types';
 
 export function getImageUrl(url: string): string {
   return url.startsWith('//') ? `https:${url}` : url;
@@ -18,22 +16,24 @@ export function serializeBlogPost(post: any): BlogPost {
       content: post.fields.content,
       publishedDate: post.fields.publishedDate,
       author: {
-        name: post.fields.author?.name || '',
-        avatar: post.fields.author?.avatar || '',
-        fields: ''
+        name: post.fields.author.fields.name,
+        avatar: post.fields.author.fields.avatar,
       },
       featuredImage: {
         fields: {
           file: {
-            url: getImageUrl(post.fields.featuredImage?.fields.file.url || ''),
+            url: post.fields.featuredImage.fields.file.url,
           },
         },
       },
       tags: post.fields.tags || [],
-      shortDescription: ''
     },
     sys: {
       id: post.sys.id,
     },
   };
+}
+
+export function renderRichText(content: Document) {
+  return documentToReactComponents(content);
 }

@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: 'https://compareprix.net/box-internet',
+      url: 'https://compareprix.net/partner',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
@@ -21,16 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: 'https://compareprix.net/box-internet',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
       url: 'https://compareprix.net/energie',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.8,
-    },
-    {
-      url: 'https://compareprix.net/blog',
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.5,
     },
     {
       url: 'https://compareprix.net/mentions-legales',

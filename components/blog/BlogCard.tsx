@@ -4,9 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import ContentfulImage from "@/app/lib/contentful-image";
+import { UserAvatar } from '@/components/common/UserAvatar';
 import { BlogPost } from '@/app/lib/types/contentful';
-import { getAuthorInitial, getImageUrl } from '@/utils/contentful';
+import { getImageUrl } from '@/utils/contentful';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -15,7 +15,6 @@ interface BlogCardProps {
 export function BlogCard({ post }: BlogCardProps) {
   const { title, slug, excerpt, publishedDate, featuredImage, author } = post.fields;
   const imageUrl = getImageUrl(featuredImage.fields.file.url);
-  const authorInitial = getAuthorInitial(author);
   
   return (
     <Link href={`/blog/${slug}`}>
@@ -36,10 +35,11 @@ export function BlogCard({ post }: BlogCardProps) {
         </CardContent>
         <CardFooter className="p-6 pt-0">
           <div className="flex items-center space-x-4">
-            {/* Affichage de l'avatar de l'auteur */}
-            <ContentfulImage className="h-8 w-8" src={author.avatar} alt={`${author.name}'s avatar`} />
-            
-            {/* Affichage des initiales de l'auteur */}
+            <UserAvatar 
+              src={author.avatar} 
+              name={author.name} 
+              className="h-8 w-8"
+            />
             <div className="space-y-1">
               <p className="text-sm font-medium leading-none">{author.name}</p>
               <p className="text-xs text-muted-foreground">

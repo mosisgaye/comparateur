@@ -17,7 +17,7 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % cardData.length);
-    }, 3000); // Change card every 3 seconds
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -39,7 +39,7 @@ const Banner: React.FC<BannerProps> = ({ title, description }) => {
           </li>
        
           <li className="flex items-start">
-            <span className="text-[#8cd147] mr-2"><PiggyBank /></span> Jusqu’à 200€ d'économies
+            <span className="text-[#8cd147] mr-2"><PiggyBank /></span> Jusqu’à 400€ d'économies
           </li>
 
 

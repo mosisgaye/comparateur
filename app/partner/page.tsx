@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Banner1 from '@/components/Banner1';
 import SansEngagement from '@/components/bouygues/SansEngagement';
 import FiberOffers from '@/components/Fiber-offers';
+import Boxg from '@/components/bouygues/Boxg';
 
 const Page = () => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-8 space-y-8">
+    <div className="max-w-screen-xl mx-auto px-4 py-8 space-y-8 ">
       {/* Banner Section */}
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold text-center text-gray-800">Découvrez nos offres</h2>
@@ -38,6 +39,7 @@ const Page = () => {
       <Banner1 />
       <SansEngagement />
       <FiberOffers />
+      <Boxg />
     </div>
   );
 };

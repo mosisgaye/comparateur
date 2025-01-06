@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 import { notFound } from 'next/navigation';
 import { getBlogPost, getBlogPosts } from '@/app/lib/contentful';
-import ContentfulImage from '@/app/lib/contentful-image';
-import { getAuthorInitial, getImageUrl } from '@/utils/contentful';
+import { UserAvatar } from '@/components/common/UserAvatar';
+import { getImageUrl, renderRichText } from '@/utils/contentful';
 
 interface BlogPostPageProps {
   params: {
@@ -30,23 +30,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
-      <header className="mb-8">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
+      <div className="mb-8">
+        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-4xl">{title}</h1>
         <div className="flex items-center space-x-4">
-          <ContentfulImage
-            className="h-8 w-8 rounded-full"
-            src={author.avatar}
-            alt={`${author.name}'s avatar`}
+          <UserAvatar 
+            src={author.avatar} 
+            name={author.name} 
+            className="h-10 w-10"
           />
           <div>
             <p className="font-medium">{author.name}</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-3xl text-muted-foreground">
               {format(new Date(publishedDate), 'MMMM d, yyyy')}
             </p>
           </div>
         </div>
-      </header>
-
+      </div>
+      
       <div className="relative mb-8 h-[400px] w-full overflow-hidden rounded-lg">
         <Image
           src={imageUrl}
@@ -56,10 +56,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         />
       </div>
 
-      <section
-        className="prose prose-lg max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <div className="prose prose-lg max-w-none dark:prose-invert text-2xl text-justify leading-10">
+        {renderRichText(content)}
+      </div>
     </article>
   );
 }

@@ -4,7 +4,6 @@ import Banner from '@/components/Banner';
 import FeatureSection from '@/components/FeatureSection';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import Rating from '@/components/Rating';
-import Page from '@/app/blog/page'; // Assurez-vous que ce chemin est correct
 
 import {
   bannerContent,
@@ -44,19 +43,9 @@ export default function Index() {
             title={ratingContent.title}
             description={ratingContent.description}
           />
-        </section>
-
-        {/* Section Blog */}
-        <section aria-labelledby="blog" className="py-10">
-          <Page /> {/* Votre composant blog */}
-        </section>
-
-     
-        
+        </section>   
           <AdBanner />
-    
-
-        {/* Section Newsletter */}
+ 
         <section aria-labelledby="newsletter" className="py-10">
           <NewsletterSignup
             title={newsletterSignupContent.title}

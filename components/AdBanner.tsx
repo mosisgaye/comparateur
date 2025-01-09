@@ -4,9 +4,9 @@ import Image from 'next/image'
 const offers = [
   {
     id: 1,
-    href: "https://www.awin1.com/cread.php?s=3408192&v=7315&q=309019&r=1749047",
-    imgSrc: "https://www.awin1.com/cshow.php?s=3408192&v=7315&q=309019&r=1749047",
-    altText: "SFR FR Offer 1",
+    href: "https://www.awin1.com/cread.php?s=2856460&v=7315&q=309012&r=1749047",
+    imgSrc: "https://www.awin1.com/cshow.php?s=2856460&v=7315&q=309012&r=1749047",
+    altText: "SFR FR Offer 2",
   },
   {
     id: 2,

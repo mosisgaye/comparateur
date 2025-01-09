@@ -13,13 +13,13 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ title, description }) =
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
       <FeatureCard
         title="Box Internet Fibre"
-        description="Découvrez les meilleures offres de forfait internet avec box internet fibre, incluant des débits allant jusqu'à 8 Gb/s. Comparez les prix des opérateurs comme Orange et Bouygues, et choisissez sans engagement."
+        description="Découvrez les meilleures offres de forfait internet avec box internet fibre, incluant des débits allant jusqu'à 8 Gb/s."
         buttonText="Voir les offres"
         imageUrl="/images/fibre.jpg"
       />
       <FeatureCard
         title="Box Internet A petit prix"
-        description="Découvrez les meilleures offres de forfait internet avec box internet fibre, incluant des débits allant jusqu'à 8 Gb/s. Comparez les prix des opérateurs comme Orange et Bouygues, et choisissez sans engagement."
+        description="Découvrez les meilleures offres de forfait internet avec box internet fibre, incluant des débits allant jusqu'à 8 Gb/s."
         buttonText="Voir les offres"
         imageUrl="/images/cheap.jpg"
       />

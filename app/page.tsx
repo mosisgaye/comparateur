@@ -1,58 +1,74 @@
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import { Metadata } from 'next';
 import Banner from '@/components/Banner';
 import FeatureSection from '@/components/FeatureSection';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import Rating from '@/components/Rating';
+import AdBanner from '@/components/AdBanner';
+import { Feedback } from '@/components/Feedback';
+import ChatSupport from '@/components/ChatSupport';
 
 import {
   bannerContent,
-  carouselContent,
   featureSectionContent,
   ratingContent,
   newsletterSignupContent,
 } from '@/constants/index';
-import AdBanner from '@/components/AdBanner';
+import Faq from '@/components/Faq';
 
-export default function Index() {
+export const metadata: Metadata = {
+  title: 'ComparePrix - Comparez et économisez',
+  description: 'Trouvez les meilleures offres et comparez les prix sur ComparePrix',
+  
+};
+
+
+
+export default function HomePage() {
   return (
-    <>
-      <Head>
-        <link rel="canonical" href="https://compareprix.net" />
-      </Head>
-      <main className="flex-1 flex flex-col gap-6 px-4">
-        {/* Section Bannière */}
-        <section aria-labelledby="banner">
-          <Banner
-            title={bannerContent.title}
-            description={bannerContent.description}
-          />
-        </section>
+    <main className="min-h-screen bg-gray-100">
+      <section aria-labelledby="banner-title" className="relative">
+        <Banner
+          title={bannerContent.title}
+          description={bannerContent.description}
+        />
+      </section>
 
-        {/* Section Fonctionnalités */}
-        <section aria-labelledby="features">
-          <FeatureSection
-            title={featureSectionContent.title}
-            description={featureSectionContent.description}
-          />
-        </section>
+      <section aria-labelledby="features-title" className="py-12">
+        <FeatureSection
+          title={featureSectionContent.title}
+          description={featureSectionContent.description}
+        />
+      </section>
 
-        {/* Section Avis & Notations */}
-        <section aria-labelledby="rating">
-          <Rating
-            title={ratingContent.title}
-            description={ratingContent.description}
-          />
-        </section>   
-          <AdBanner />
- 
-        <section aria-labelledby="newsletter" className="py-10">
-          <NewsletterSignup
-            title={newsletterSignupContent.title}
-            description={newsletterSignupContent.description}
-          />
-        </section>
-      </main>
-    </>
+      <section aria-labelledby="rating-title" className="py-12 bg-white">
+        <Rating
+          title={ratingContent.title}
+          description={ratingContent.description}
+        />
+      </section>
+
+      <section aria-label="Offres spéciales" className="py-8">
+        <AdBanner />
+      </section>
+
+      <section aria-labelledby="newsletter-title" className="py-12 bg-gray-50">
+        <NewsletterSignup
+          title={newsletterSignupContent.title}
+          description={newsletterSignupContent.description}
+        />
+      </section>
+
+      <div className="fixed bottom-24 right-6 z-40">
+        <Feedback />
+      </div>
+
+      <div className="fixed bottom-6 right-6 z-50">
+        <ChatSupport />
+      </div>
+      <div aria-labelledby="faq" className="py-12 bg-gray-50">
+        <Faq />
+      </div>
+    </main>
   );
 }
+

@@ -16,17 +16,6 @@ export const metadata = {
   title: "ComparePrix | Comparateur de Téléphones et Box Internet",
   description:
     "Trouvez les meilleures offres de téléphones et de box internet en France. Comparez les prix, les forfaits et les opérateurs pour faire le meilleur choix.",
-  keywords: [
-    "comparateur",
-    "forfait mobile",
-    "meilleur téléphone",
-    "comparatif",
-    "smartphone",
-    "meilleur opérateur",
-    "prix",
-    "box internet",
-    "énergie",
-  ].join(", "),
   robots: "index, follow",
   openGraph: {
     title: "ComparePrix | Comparateur de Téléphones et Box Internet",
@@ -80,13 +69,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'G-PJ9RE52R47');
         `}
       </Script>
-
-      {/* Script Zendesk Widget */}
-      <Script
-        id="ze-snippet"
-        src="https://static.zdassets.com/ekr/snippet.js?key=777b7567-a93f-45a2-978a-cf88ee408bce"
-        strategy="afterInteractive"
-      />
 
       <body className="bg-gray-50">
         <Header />

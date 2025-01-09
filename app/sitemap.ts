@@ -9,19 +9,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: 'https://compareprix.net/partner',
+      url: 'https://compareprix.net/bouygues',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
     },
     {
-      url: 'https://compareprix.net/forfait-mobile',
+      url: 'https://compareprix.net/forfaits',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.5,
     },
     {
-      url: 'https://compareprix.net/box-internet',
+      url: 'https://compareprix.net/box',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,

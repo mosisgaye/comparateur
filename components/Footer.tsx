@@ -1,48 +1,50 @@
-import Link from 'next/link'; // Importation du composant Link de Next.js
+import Link from 'next/link';
+import Image from 'next/image';
+
+const footerLinks = [
+  { href: '/mentions-legales', text: 'Mentions légales' },
+  { href: '/condition-generale', text: 'Conditions générales' },
+  { href: '/cookies', text: 'Cookies' },
+];
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-[#012737] text-black font-semibold">
-      <div className="container py-10 bg-white dark:bg-[#012737]">
-        <div className="flex w-full items-center justify-between max-md:flex-col">
-          {/* Section © 2024 ComparePrix. alignée à gauche */}
-          <div className="flex flex-1 justify-start">
-            <p className="text-p5 transition-all duration-500 hover:text-p1">
-              © 2024 ComparePrix.
+    <footer className="bg-white dark:bg-[#012737] text-black dark:text-white font-semibold py-6 md:py-10">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          {/* Copyright section */}
+          <div className="text-sm md:text-base">
+            <p className="transition-colors duration-300 hover:text-gray-600 dark:hover:text-gray-300">
+              © {new Date().getFullYear()} ComparePrix.
             </p>
           </div>
 
-          {/* Section centrale avec Mentions légales, Conditions générales, et Cookies */}
-          <div className="flex items-center justify-center gap-6">
-            <Link href="/mentions-legales">
-              <p className="legal-after text-p5 transition-all duration-500 hover:text-p1 cursor-pointer">
-                Mentions légales
-              </p>
-            </Link>
-            <Link href="/condition-generale">
-              <p className="text-p5 transition-all duration-500 hover:text-p1 cursor-pointer">
-                Conditions générales
-              </p>
-            </Link>
-            <Link href="/cookies">
-              <p className="text-p5 transition-all duration-500 hover:text-p1 cursor-pointer">
-                Cookies
-              </p>
-            </Link>
-          </div>
+          {/* Central links section */}
+          <nav className="flex flex-wrap justify-center gap-4 md:gap-6">
+            {footerLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="text-sm md:text-base">
+                <span className="transition-colors duration-300 hover:text-gray-600 dark:hover:text-gray-300 cursor-pointer">
+                  {link.text}
+                </span>
+              </Link>
+            ))}
+          </nav>
 
-          {/* Section GDPR alignée à droite */}
-          <div className="flex flex-1 justify-end">
+          {/* GDPR section */}
+          <div>
             <a
               href="https://gdprinfo.eu/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center"
+              className="inline-block"
+              aria-label="GDPR Information"
             >
-              <img
+              <Image
                 src="/images/gdpr.svg"
                 alt="Logo GDPR"
-                className="w-8 h-8 object-contain"
+                width={32}
+                height={32}
+                className="w-6 h-6 md:w-8 md:h-8 transition-opacity duration-300 hover:opacity-80"
               />
             </a>
           </div>
@@ -53,3 +55,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

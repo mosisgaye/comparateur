@@ -5,7 +5,7 @@ import NewsletterSignup from '@/components/NewsletterSignup';
 import Rating from '@/components/Rating';
 import AdBanner from '@/components/AdBanner';
 import { Feedback } from '@/components/Feedback';
-import ChatSupport from '@/components/ChatSupport';
+import { ChatWidget } from '@/components/ChatWidget';
 
 import {
   bannerContent,
@@ -63,11 +63,9 @@ export default function HomePage() {
       </div>
 
       <div className="fixed bottom-6 right-6 z-50">
-        <ChatSupport />
+        <ChatWidget />
       </div>
-      <div aria-labelledby="faq" className="py-12 bg-gray-50">
-        <Faq />
-      </div>
+      
     </main>
   );
 }

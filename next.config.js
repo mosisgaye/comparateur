@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: { unoptimized: true },
+  images: {
+    unoptimized: false, // Laissez false si vous souhaitez utiliser l'optimisation d'images par Next.js
+    domains: ['www.awin1.com', 'tracking.publicidees.com'], // Ajoutez ici les domaines externes autorisés
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -8,10 +11,10 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://telecom.bemove.fr/:path*', // Redirige vers l'API backend
+        destination: 'https://telecom.bemove.fr/:path*', 
       },
     ];
   },
 };
 
-module.exports = nextConfig;  // Ensure it's exported correctly
+module.exports = nextConfig;

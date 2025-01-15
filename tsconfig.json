@@ -20,7 +20,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+     
     }
   },
   "include": [
@@ -28,9 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.jsx",
-    ".next/types/**/*.ts",
-    "components/KwankoTool.jsx",
-    "app/blog/BlogPost.tsx"
-, "components/bouygues/ExternalScript.js"  ],
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

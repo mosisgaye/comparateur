@@ -7,7 +7,7 @@ import { Phone } from 'lucide-react';
 
 
 const navItems = [
-  { href: '/bouygues', label: 'Partenaires' },
+  { href: '/partenaires', label: 'Partenaires' },
   { href: '/forfaits/', label: 'Forfait mobile' },
   { href: '/box/', label: 'Box Internet' },
   { href: '/energie/', label: 'Energie' },

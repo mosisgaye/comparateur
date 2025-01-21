@@ -1,60 +1,37 @@
-import React from "react";
-import { OfferType } from "@/components/bouygues/types";
+import Image from "next/image";
+import Link from "next/link";
 
 interface OfferCardProps {
-  offer: OfferType;
+  title: string;
+  description: string;
+  imageUrl: string;
+  ctaUrl: string;
 }
 
-const OfferCard: React.FC<OfferCardProps> = ({ offer }) => {
+export default function OfferCard({ title, description, imageUrl, ctaUrl }: OfferCardProps) {
   return (
-    <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+    <div className="bg-[#F5F7FF] border border-[#E6E9F8] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+      <div className="relative h-48">
+        <Image
+          src={imageUrl || "/placeholder.svg"}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="transition-transform duration-300 hover:scale-105"
+        />
+      </div>
       <div className="p-6">
-        <div className="flex items-center justify-between mb-6">
-          <img
-            src={offer.image}
-            alt={offer.name}
-            className="w-20 h-20 object-contain"
-          />
-          <h3 className="text-2xl font-bold text-blue-900">{offer.name}</h3>
-        </div>
-        
-        <p className="text-gray-600 mb-6">{offer.description}</p>
-        
-        <div className="bg-blue-50 rounded-xl p-4 mb-6">
-          <div className="text-3xl font-bold text-blue-900 mb-2">
-            {offer.price}
-            <span className="text-sm font-normal text-gray-600 ml-2">
-              /mois
-            </span>
-          </div>
-          <p className="text-sm text-gray-600">
-            Puis {offer.after12Months} après 12 mois
-          </p>
-          <p className="text-sm text-gray-600">
-            Engagement : {offer.engagement}
-          </p>
-        </div>
-
-        <div className="space-y-3 mb-6">
-          {offer.features.map((feature, i) => (
-            <div key={i} className="flex items-center gap-3">
-              <feature.icon className="w-5 h-5 text-blue-600 flex-shrink-0" />
-              <span className="text-gray-700">{feature.text}</span>
-            </div>
-          ))}
-        </div>
-
-        <a
-          href={offer.link}
+        <h3 className="text-xl font-semibold text-[#8cd147] mb-2">{title}</h3>
+        <p className="text-gray-700 mb-4">{description}</p>
+        <Link
+          href={ctaUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full bg-gradient-to-r from-[#ff9800] to-[#ff5722] text-white text-center py-4 rounded-3xl font-semibold hover:bg-orange-600 transition-colors duration-300"
+          className="inline-block bg-[#8cd147] text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg"
         >
-          Je choisis cette offre
-        </a>
+          En profiter
+        </Link>
       </div>
     </div>
   );
-};
-
-export default OfferCard;
+}

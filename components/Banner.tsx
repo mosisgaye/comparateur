@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cardData } from '@/constants/index';
-import { Bird, ChartColumnStacked, PiggyBank, ShieldCheck, Sparkles, TrendingUp } from 'lucide-react';
+import { Bird, PiggyBank, ShieldCheck, Sparkles, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 

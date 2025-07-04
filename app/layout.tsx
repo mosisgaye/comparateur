@@ -1,11 +1,9 @@
 import "./globals.css";
-import dynamic from "next/dynamic";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import Script from "next/script";
-
-const Header = dynamic(() => import("@/components/Header"), { ssr: true });
-const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
